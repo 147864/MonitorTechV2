@@ -161,6 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+
 
 
         /*
@@ -230,6 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'form' => Collective\Html\FormFacade::class,
         'html' => Collective\Html\FormFacade::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+
 
     ],
 

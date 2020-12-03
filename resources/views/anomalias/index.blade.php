@@ -2,16 +2,30 @@
 
 @section('content')
     <h1>Anomalias</h1>
+
+    {!! Form::open(['name'=>'form_name', 'route'=>'anomalias']) !!}
+        <div class="sidebar-form">
+            <div class="input-group" >
+                <input type="text" name="desc_filtro" class="form-control" style="width: 80% !important" placeholder="Pesquisa..." >
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    {!! Form::close() !!}
+    <br>
+
+
     <div class="container">
         <table class="table table-bordered table-striped table-sm">
             <thead>
                 <tr>
                     <th>Identificador</th>
                     <th>Monitoramento</th>
-                    <th>Tipo de Anomalia</th>
                     <th>Veiculo</th>
-                    <th>Bateria</th>
-                    <th>Alternador</th>
+                    <th>Tipo de Anomalia</th>
+                    <th>Avaria de Alternador</th>
+                    <th>Avaria de Bateria</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,17 +34,15 @@
                         <td>{{ $anomalia->id }}</td>
                         <td>{{ $anomalia->monitoramento->id }}</td>
                         <td>{{ $anomalia->veiculo->nome }}</td>
-                        <td>{{ $anomalia->tipoAnamolia->descricao }}</td>
+                        <td>{{ $anomalia->id }}</td>
                         <td>{{ $anomalia->avariaBateria }}</td>
                         <td>{{ $anomalia->avariAlternador }}</td>
                         <td>
-                            <a href="{{ route('anomalias.edit', $anomalia->id) }}" class="btn-sm btn-warning btn-sm">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $anomalia->id }})" class="btn-sm btn-danger">Remover</a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="7">Nenhum registro encontrado para listar</td>
+                        <td colspan="6">Nenhum registro encontrado para listar</td>
                     </tr>
                 @endforelse
             </tbody>

@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Monitor</b>TECH',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => 'monitor<b>TECH</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/logo.png',
+    'logo_img_class' => 'brand-image elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'MonitoTECH',
 
     /*
     |--------------------------------------------------------------------------
@@ -240,46 +240,46 @@ return [
         [
             'text' => 'Cidades',
             'url'  => 'cidades',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-map-marked-alt',
         ],
         [
             'text' => 'Clientes',
             'url'  => 'clientes',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-users',
         ],
         [
             'text' => 'Tipos de Veículo',
             'url'  => 'tipoVeiculos',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-car-alt',
         ],
         [
             'text' => 'Veículos',
             'url'  => 'veiculos',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-tractor',
         ],
         [
             'text' => 'Gerar Monitoramento',
             'url'  => 'monitoramentos',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-car-battery',
         ],  
         [
             'text' => 'Tipos de Anomalias',
             'url'  => 'tipoAnomalias',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fab fa-searchengin',
         ],
         [
             'text' => 'Anomalias',
             'url'  => 'anomalias',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-bug',
         ],
         
         [
             'text'    => 'Relatórios',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-print',
             'submenu' => [
                 [
                     'text' => 'Clientes',
-                    'url'  => '#',
+                    'url'  => 'pdf',
                 ],
                 [
                     'text' => 'Tipo de Veículos',

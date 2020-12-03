@@ -24,6 +24,7 @@ class VeiculoRequest extends FormRequest
     public function rules()
     {
         return [
+            'cliente_id' => 'required',
             'nome' => 'required',
             'marca' => 'required',
             'tipo_id' => 'required',

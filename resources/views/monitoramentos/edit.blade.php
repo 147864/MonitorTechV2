@@ -31,11 +31,6 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('data_hora', 'Data:') !!}
-        {!! Form::date('data_hora', $monitoramentos->data_hora, ['class' => 'form-control', 'required']) !!}
-    </div>
-
-    <div class="form-group">
         {!! Form::submit('Alterar Monitoramento', ['class' => 'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
     </div>

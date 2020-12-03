@@ -7,8 +7,17 @@ use App\Cidades;
 use App\Http\Requests\CidadeRequest;
 
 class CidadesController extends Controller{
-    public function index(){
-        $cidades = Cidades::orderBy('nome')->paginate(6);
+
+    public function index(Request $filtro){
+        $filtragem = $filtro->get('desc_filtro');
+        if ($filtragem == null)
+            $cidades = Cidades::orderBy('nome')->paginate(10);    
+        else 
+            $cidades = Cidades::where('nome','like', '%'.$filtragem.'%')
+                                    ->orderBy("nome")
+                                    ->paginate(10)
+                                    ->setpath('cidades?desc_filtro='+$filtragem);//A non-numeric value encountered ???? ta retornando essa m
+
         return view('cidades.index', ['cidades'=>$cidades]);
     }
 

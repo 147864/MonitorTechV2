@@ -11,7 +11,7 @@
     @endif
 
     <h3>Editando Tipo de Anomalia</h3>
-    {!! Form::open(['route'=>'tipoanomalias.store']) !!}
+    {!! Form::open(['route'=> ["tipoanomalias.update", 'id' => $tipoanomalias->id], 'method' => 'put']) !!}
 
     <div class="form-group">
         {!! Form::label('laudo', 'Laudo:') !!}
@@ -29,4 +29,4 @@
     </div>
 
     {!! Form::close() !!}
-    <@php echo link_to('tipoAnomalias', $title='Voltar' , $attributes=[], $secure=null); @endphp @stop
+    <@php echo link_to('tipoanomalias', $title='Voltar' , $attributes=[], $secure=null); @endphp @stop

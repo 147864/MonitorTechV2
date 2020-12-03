@@ -2,15 +2,27 @@
 
 @section('content')
     <h1>Tipos de Anomalias</h1>
+
+    {!! Form::open(['name'=>'form_name', 'route'=>'tipoanomalias']) !!}
+        <div class="sidebar-form">
+            <div class="input-group" >
+                <input type="text" name="desc_filtro" class="form-control" style="width: 80% !important" placeholder="Pesquisa..." >
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    {!! Form::close() !!}
+    <br>
+
+
     <div class="container">
-        <a href="{{ route('tipoanomalias.create') }}" class="btn btn-info btn-sm">Novo</a>
         <table class="table table-bordered table-striped table-sm">
             <thead>
                 <tr>
                     <th>Identificador</th>
                     <th>Laudo</th>
                     <th>Solucao</th>                    
-                    <th>Ações</th>  
                 </tr>
             </thead>
             <tbody>
@@ -19,10 +31,6 @@
                         <td>{{ $tipoanomalia->id }}</td>
                         <td>{{ $tipoanomalia->laudo }}</td>
                         <td>{{ $tipoanomalia->solucao }}</td>
-                        <td>
-                            <a href="{{ route('tipoanomalias.edit', $tipoanomalia->id) }}" class="btn-sm btn-warning btn-sm">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $tipoanomalia->id }})" class="btn-sm btn-danger">Remover</a>
-                        </td>
                     </tr>
                 @empty
                     <tr>
@@ -36,5 +44,5 @@
 @endsection
 
 @section('table-delete')
-    "tipoanomalias"
+    "tipoAnomalias"
 @endsection

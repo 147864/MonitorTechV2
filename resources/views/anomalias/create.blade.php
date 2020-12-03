@@ -10,8 +10,15 @@
         </ul>
     @endif
 
-    <h3>Novo Anomalia</h3>
+    <h3>Nova Anomalia</h3>
     {!! Form::open(['route'=>'anomalias.store']) !!}
+
+    <div class="form-group">
+        {!! Form::label('monitoramento_id', 'Monitoramento:') !!}
+        {!! Form::select('monitoramento_id',
+                        \App\Monitoramentos::orderBy('id')->pluck('id')->toArray(),
+                        null, ['class'=>'form-control', 'required']) !!}
+    </div>
 
     <div class="form-group">
         {!! Form::label('veiculo_id', 'Veículo:') !!}
@@ -21,18 +28,20 @@
     </div>
     
     <div class="form-group">
-        {!! Form::label('voltBateria', 'Bateria:') !!}
-        {!! Form::number('voltBateria', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::label('tipoAnomalia_id', 'Tipo de Anomalia:') !!}
+        {!! Form::select('tipoAnomalia_id',
+                        \App\TipoAnomalias::orderBy('laudo')->pluck('laudo', 'id')->toArray(),
+                        null, ['class'=>'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('voltAlternador', 'Alternador:') !!}
-        {!! Form::number('voltAlternador', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::label('avariAlternador', 'Avaria da Alternador:') !!}
+        {!! Form::number('avariAlternador', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('dataHora', 'Data:') !!}
-        {!! Form::date('dataHora', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::label('avariaBateria', 'Avaria da Bateria:') !!}
+        {!! Form::number('avariaBateria', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">

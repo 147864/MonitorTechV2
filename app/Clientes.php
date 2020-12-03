@@ -12,4 +12,8 @@ class Clientes extends Model
     public function cidade(){
         return $this->belongsTo("App\Cidades");
     }
+
+    public function veiculo(){
+        return $this->hasMany("App\Veiculos");
+    }
 }
