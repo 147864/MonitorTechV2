@@ -10,9 +10,16 @@
         </ul>
     @endif
     
-    <h3>Novo Veículo</h3>
+    <h3>Editando Veículo</h3>
     {!! Form::open(['route'=> ["veiculos.update", 'id' => $veiculos->id], 'method' => 'put']) !!}
 
+    <div class="form-group">
+        {!! Form::label('cliente_id', 'Cliente:') !!}
+        {!! Form::select('cliente_id',
+                        \App\Clientes::orderBy('nome')->pluck('nome', 'id')->toArray(),
+                        $veiculos->cliente->nome, ['class'=>'form-control', 'required']) !!}
+    </div>
+    
     <div class="form-group">
         {!! Form::label('nome', 'Nome:') !!}
         {!! Form::text('nome', $veiculos->nome, ['class' => 'form-control', 'required']) !!}

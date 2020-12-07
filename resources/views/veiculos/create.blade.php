@@ -14,9 +14,15 @@
     {!! Form::open(['route'=>'veiculos.store']) !!}
 
     <div class="form-group">
+        {!! Form::label('cliente_id', 'Cliente:') !!}
+        {!! Form::select('cliente_id',
+                        \App\Clientes::orderBy('nome')->pluck('nome', 'id')->toArray(),
+                        null, ['class'=>'form-control', 'required']) !!}
+    </div>
+    
+    <div class="form-group">
         {!! Form::label('nome', 'Nome:') !!}
         {!! Form::text('nome', null, ['class' => 'form-control', 'required']) !!}
-        
     </div>
 
     <div class="form-group">

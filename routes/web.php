@@ -67,6 +67,8 @@ Route::group(['middleware' =>'auth'], function(){
         Route::put('{id}/update', ['as'=>'tipoanomalias.update',    'uses'=>'TipoAnomaliasController@update' ]);
         Route::post('store', ['as'=>'tipoanomalias.store',     'uses'=>'TipoAnomaliasController@store'  ]);
     });
+
+    Route::get('pdf', 'PdfController@geraPdf');
 });
 
 

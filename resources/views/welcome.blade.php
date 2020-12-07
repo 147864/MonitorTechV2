@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.home')
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -93,9 +93,8 @@
                     <a href="/cidades">Cidades</a>
                     <a href="/clientes">Clientes</a>
                     <a href="/veiculos">Veículos</a>
-                    <a href="/tipoVeiculos">Tipos de Veículos</a>
-                    <a href="/monitoramentos">Monitoramentos</a>
-                    <a href="/anomalias">Gestão de anomalias</a>
+                    <a href="/monitoramentos">Gestão de Monitoramentos</a>
+                    <a href="/anomalias">anomalias</a>
                 </div>
             </div>
         </div>

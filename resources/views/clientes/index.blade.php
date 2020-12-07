@@ -2,6 +2,19 @@
 
 @section('content')
     <h1>Clientes</h1>
+
+    {!! Form::open(['name'=>'form_name', 'route'=>'clientes']) !!}
+        <div class="sidebar-form">
+            <div class="input-group" >
+                <input type="text" name="desc_filtro" class="form-control" style="width: 80% !important" placeholder="Pesquisa..." >
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+    {!! Form::close() !!}
+    <br>
+
     <div class="container">
         <a href="{{ route('clientes.create') }}" class="btn btn-info btn-sm">Novo</a>
         <table class="table table-bordered table-striped table-sm">
@@ -38,7 +51,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="10">Nenhum registro encontrado para listar</td>
+                        <td colspan="3">Nenhum registro encontrado para listar</td>
                     </tr>
                 @endforelse
             </tbody>

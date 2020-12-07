@@ -11,7 +11,7 @@
     @endif
     
     
-    <h3>Novo Cliente</h3>
+    <h3>Editando Cliente</h3>
     {!! Form::open(['route'=> ["clientes.update", 'id'=>$clientes->id], 'method'=>'put']) !!}
 
     <div class="form-group">

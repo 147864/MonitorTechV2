@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Anomalias extends Model
 {
     protected $table = "anomalias";
-    protected $fillable = ["monitoramento_id", "tipoAnomalia_id", "veiculo_id", "avariaBateria", "avariaAlternador"];
+    protected $fillable = ["monitoramento_id","veiculo_id", "tipoAnomalia_id", "avariaBateria", "avariAlternador"];
 
     public function monitoramento(){
-        return $this->hasOne("App\Monitoramentos");
+        return $this->belongsTo("App\Monitoramentos");
     }
 
     public function veiculo(){
@@ -18,6 +18,6 @@ class Anomalias extends Model
     }
 
     public function tipoAnomalia(){
-        return $this->hasOne("App\TipoAnomalias");
+        return $this->belongsTo("App\TipoAnomalias");
     }
 }

@@ -31,11 +31,6 @@
     </div>
 
     <div class="form-group">
-        {!! Form::label('dataHora', 'Data:') !!}
-        {!! Form::date('dataHora', null, ['class' => 'form-control', 'required']) !!}
-    </div>
-
-    <div class="form-group">
         {!! Form::submit('Criar Monitoramento', ['class' => 'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
     </div>

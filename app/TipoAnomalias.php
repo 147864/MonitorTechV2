@@ -10,6 +10,6 @@ class TipoAnomalias extends Model
     protected $fillable = ["laudo", "solucao"];
 
     public function anomalia(){
-        return $this->belongsTo("App\Anomalias");
+        return $this->hasOne("App\Anomalias");
     }
 }

@@ -24,10 +24,10 @@ class AnomaliaRequest extends FormRequest
     public function rules()
     {
         return [
-            'avariaBateria' => 'required',
-            'avariAlternador' => 'required',
             'monitoramento_id' => 'required',
             'veiculo_id' => 'required',
+            'avariaBateria' => 'required',
+            'avariAlternador' => 'required',
             'tipoAnomalia_id' => 'required',
         ];
     }

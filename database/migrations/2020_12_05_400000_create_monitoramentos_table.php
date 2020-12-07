@@ -18,7 +18,6 @@ class CreateMonitoramentosTable extends Migration
             $table->String("veiculo");
             $table->decimal('voltBateria');
             $table->decimal('voltAlternador');
-            $table->dateTime('dataHora');
             $table->timestamps();
         });
     }

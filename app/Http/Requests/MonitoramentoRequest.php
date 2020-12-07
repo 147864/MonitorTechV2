@@ -27,7 +27,6 @@ class MonitoramentoRequest extends FormRequest
             'veiculo_id' => 'required',
             'voltBateria' => 'required',
             'voltAlternador' => 'required',
-            'dataHora' => 'required',
         ];
     }
 }

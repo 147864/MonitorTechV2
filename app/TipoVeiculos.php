@@ -10,6 +10,6 @@ class TipoVeiculos extends Model
     protected $fillable = ['nome','bateria', 'alternador'];
 
     public function veiculo(){
-        return $this->hasOne("App\Veiculos");
+        return $this->belongsTo("App\Veiculos");
     }
 }
