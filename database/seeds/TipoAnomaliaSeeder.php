@@ -14,8 +14,9 @@ class TipoAnomaliaSeeder extends Seeder
     public function run()
     {
         TipoAnomalias::create(['laudo' => 'Bateria OK. Alternador OK.', 'solucao' =>'Está tudo bem :)']);
-        TipoAnomalias::create(['laudo' => 'Bateria descarregada. Alternador OK.', 'solucao' =>'Ficou muito tempo com o veículo parado? Dê uma carga lenta na sua bateria, entre 6 e 12 horas.']);
-        TipoAnomalias::create(['laudo' => 'Bateria OK. Alternador não está carregando corretamente.', 'solucao' =>'Seu alterandor não está carregando corretamente, procure um técnico você ficara sem arranque em breve.']);
-        TipoAnomalias::create(['laudo' => 'Bateria OK. Alternador carregando muito.', 'solucao' =>'Seu alternador está carregando MUITO. Procure imediatamente um técnico, essa anomalia pode danificar sua bateria.']);
+        TipoAnomalias::create(['laudo' => 'Bateria OK. Alternador não está carregando corretamente.', 'solucao' =>'Seu alterandor não está carregando corretamente, procure um técnico ou você ficará sem arranque em breve.']);
+        TipoAnomalias::create(['laudo' => 'Bateria OK. Alternador carregando MUITO !!.', 'solucao' =>'Seu alternador está carregando MUITO. Procure imediatamente um técnico, essa anomalia pode danificar sua bateria.']);
+        TipoAnomalias::create(['laudo' => 'Bateria fraca. Alternador OK.', 'solucao' =>'Sua bateria está sem forças. Seu alternador carrega bem, porém ela não tem forças para girar o motor. Considere a substituição.']);
+        TipoAnomalias::create(['laudo' => 'Bateria fraca. Alternador não está carregando corretamente', 'solucao' =>'Falha geral no sistema elétrico. Você está em arranque, procure o seu técnico.']);
     }
 }

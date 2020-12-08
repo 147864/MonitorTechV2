@@ -15,10 +15,10 @@
     {!! Form::close() !!}
     <br>
 
-
-    <div class="container">
-        <a href="{{ route('veiculos.create') }}" class="btn btn-info btn-sm">Novo</a>
-        <table class="table table-bordered table-striped table-sm">
+    
+    <div class="container-fluid">
+        <a href="{{ route('veiculos.create') }}" class="btn btn-primary btn-lg">Adicionar</a>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Cliente</th>
@@ -42,13 +42,13 @@
                         <td>{{ $veiculo->ano }}</td>
                         <td>{{ $veiculo->cor }}</td>
                         <td>
-                            <a href="{{ route('veiculos.edit', $veiculo->id) }}" class="btn-sm btn-warning btn-sm">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $veiculo->id }})" class="btn-sm btn-danger">Remover</a>
+                            <a href="{{ route('veiculos.edit', $veiculo->id) }}" class="far fa-edit"></a>
+                            <a href="#" onclick="return ConfirmaExclusao({{ $veiculo->id }})" class="fas fa-trash-alt"></a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="7">Nenhum registro encontrado para listar</td>
+                        <td colspan="8">Nenhum registro encontrado para listar</td>
                     </tr>
                 @endforelse
             </tbody>

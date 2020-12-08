@@ -8,8 +8,12 @@ use App\Http\Requests\AnomaliaRequest;
 
 class AnomaliasController extends Controller{
     public function index(){
-        $anomalias = Anomalias::orderBy('id')->paginate(6);
+        $anomalias = Anomalias::orderBy('id')->paginate(10);
         return view('anomalias.index', ['anomalias'=>$anomalias]);// NESSA LINHA VAI DAR MERDA
+    }
+
+    public function relFiltros(){
+        return view ('anomalias.relFiltros');
     }
 
     public function create (){

@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&sgid=1&sid=2&server_type=pg&did=65676 -->
+<html class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>monitortechv2/postgres@PostgreSQL 10 (x86)</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- To set pgAdmin4 shortcut icon in browser -->
+    <link rel="shortcut icon" href="http://127.0.0.1:60583/favicon.ico?ver=42400">
+
+    <!-- Base template stylesheets -->
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link type="text/css" rel="stylesheet" href="./pgadmin.style.css">
+    <link type="text/css" rel="stylesheet" href="./pgadmin.css">
+
+     <!--View specified stylesheets-->
+    
+    <script>
+        /* This is used to change publicPath of webpack at runtime */
+        window.getChunkURL = function() {
+            return "/static/js/generated/";
+        };
+    </script>
+    <!-- Base template scripts -->
+    <script type="text/javascript" src="./require.min.js.download"></script>
+    <script type="text/javascript">
+            require.config({
+                baseUrl: '',
+                urlArgs: 'ver=42400',
+                waitSeconds: 0,
+                shim: {},
+                paths: {
+                    sources: "/static/js",
+                    datagrid: "/static/js/generated/datagrid",
+                    sqleditor: "/static/js/generated/sqleditor",
+                    'pgadmin.browser.utils': "/browser/" + "js/utils",
+                    'pgadmin.browser.endpoints': "/browser/" + "js/endpoints",
+                    'pgadmin.browser.messages': "/browser/" + "js/messages",
+                    'pgadmin.server.supported_servers': "/browser/" + "server/supported_servers",
+                    'pgadmin.user_management.current_user': "/user_management/" + "current_user",
+                    'translations': "/tools/" + "translations"
+                }
+            });
+
+    </script>
+
+    <!-- View specified scripts -->
+    <script type="text/javascript" src="./vendor.main.js.download"></script>
+    <script type="text/javascript" src="./vendor.others.js.download"></script>
+    <script type="text/javascript" src="./pgadmin_commons.js.download"></script>
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/browser_nodes" src="./browser_nodes.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/codemirror" src="./codemirror.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/slickgrid" src="./slickgrid.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/generated/sqleditor" src="./sqleditor.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="translations" src="./translations.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.endpoints" src="./endpoints.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.utils" src="./utils.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.user_management.current_user" src="./current_user.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.browser.messages" src="./messages.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pgadmin.server.supported_servers" src="./supported_servers.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/gettext" src="./gettext.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sources/pgadmin" src="./pgadmin.js.download"></script><link id="wcTheme" rel="stylesheet" type="text/css" href="./webcabin.overrides(1).css"><style type="text/css" rel="stylesheet">.slickgrid_278717 .slick-header-column { left: 1000px; } .slickgrid_278717 .slick-top-panel { height:25px; } .slickgrid_278717 .slick-preheader-panel { height:25px; } .slickgrid_278717 .slick-headerrow-columns { height:25px; } .slickgrid_278717 .slick-footerrow-columns { height:25px; } .slickgrid_278717 .slick-cell { height:25px; } .slickgrid_278717 .slick-row { height:25px; } .slickgrid_278717 .l0 { } .slickgrid_278717 .r0 { } .slickgrid_278717 .l1 { } .slickgrid_278717 .r1 { } .slickgrid_278717 .l2 { } .slickgrid_278717 .r2 { } .slickgrid_278717 .l3 { } .slickgrid_278717 .r3 { } .slickgrid_278717 .l4 { } .slickgrid_278717 .r4 { } .slickgrid_278717 .l5 { } .slickgrid_278717 .r5 { } .slickgrid_278717 .l6 { } .slickgrid_278717 .r6 { } .slickgrid_278717 .l7 { } .slickgrid_278717 .r7 { } .slickgrid_278717 .l8 { } .slickgrid_278717 .r8 { } .slickgrid_278717 .l9 { } .slickgrid_278717 .r9 { } .slickgrid_278717 .l10 { } .slickgrid_278717 .r10 { }</style></head>
+<body tabindex="0" class="wcDesktop">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<style>
+    body {padding: 0px;}
+    </style>
+<div id="main-editor_panel">
+    <div class="sql-editor">
+        <div id="btn-toolbar" class="editor-toolbar" role="toolbar" aria-label="">
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-load-file" type="button" class="btn btn-sm btn-primary-icon btn-load-file" title="Open File (accesskey + O)" accesskey="O" tabindex="0" aria-label="Open File (accesskey + O)">
+                    <i class="fa fa-folder-open-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-save-file" type="button" class="btn btn-sm btn-primary-icon" title="Save File (accesskey + S)" accesskey="S" aria-label="Save File (accesskey + S)">
+                    <i class="fa fa-floppy-o sql-icon-lg" aria-hidden="true" tabindex="0" role="img"></i>
+                </button>
+                <button id="btn-file-menu-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-file-menu-save" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0" style="display: block;">
+                            <span>Save</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-file-menu-save-as" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span>Save As</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-save-data" type="button" class="btn btn-sm btn-primary-icon" title="Save Data Changes (F6)" accesskey="" tabindex="0" disabled="" aria-label="Save Data Changes (F6)">
+                    <i class="pg-font-icon icon-save-data-changes sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-find" type="button" class="btn btn-sm btn-primary-icon" aria-label="Find" title="Find (Ctrl/Cmd+F)">
+                    <i class="fa fa-search sql-icon-lg" aria-hidden="true" tabindex="0" role="img"></i>
+                </button>
+                <button id="btn-find-menu-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Find (accesskey + N)" accesskey="N" tabindex="0" aria-label="Find (accesskey + N)">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Find                                  (Ctrl+F)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-next" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Find Next                                  (Ctrl+G)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-previous" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Find Previous                                  (Ctrl+Shift+G)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-find-persistent" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span>Persistent Find</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-replace" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Replace                                  (Ctrl+Shift+F)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-replace-all" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span>Replace All</span>
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" id="btn-find-menu-jump" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span>Jump (Alt+G)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-copy-row" type="button" class="btn btn-sm btn-primary-icon" title="Copy (accesskey + C)" accesskey="C" tabindex="0" disabled="" aria-label="Copy (accesskey + C)">
+                    <i class="fa fa-files-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-copy-row-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-copy-with-header" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="copy-with-header fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Copy with headers </span>
+                        </a>
+                    </li>
+                </ul>
+                <button id="btn-paste-row" type="button" class="btn btn-sm btn-primary-icon" title="Paste (accesskey + P)" accesskey="P" tabindex="0" disabled="" aria-label="Paste (accesskey + P)">
+                    <i class="fa fa-clipboard sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-delete-row" type="button" class="btn btn-sm btn-primary-icon" title="Delete (accesskey + D)" accesskey="D" tabindex="0" disabled="" aria-label="Delete (accesskey + D)">
+                    <i class="fa fa-trash sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-edit-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Edit" title="Edit" tabindex="0">
+                    <i class="fa fa-pencil-square-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-indent-code" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Indent Selection (Tab) </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-unindent-code" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Unindent Selection (Shift+Tab) </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-comment-line" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Inline Comment Selection                                  (Ctrl+/)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-uncomment-line" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Inline Uncomment Selection                                  (Ctrl+.)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-toggle-comment-block" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Block Comment/Uncomment Selection                                  (Shift+Ctrl+/)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-filter" type="button" class="btn btn-secondary" title="Filter (accesskey + F)" accesskey="F" tabindex="0" disabled="" aria-label="Filter (accesskey + F)">
+                    <i class="fa fa-filter sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-filter-dropdown" type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Filter options (accesskey + I)" accesskey="I" disabled="" tabindex="0" aria-label="Filter options (accesskey + I)">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a id="btn-filter-menu" class="dropdown-item" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">Sort/Filter</a>
+                    </li>
+                    <li>
+                        <a id="btn-include-filter" class="dropdown-item" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">Filter by Selection</a>
+                    </li>
+                    <li>
+                        <a id="btn-exclude-filter" class="dropdown-item" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">Exclude by Selection</a>
+                    </li>
+                    <li>
+                        <a id="btn-remove-filter" class="dropdown-item" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">Remove Sort/Filter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <select id="btn-rows-limit" class="limit form-control form-control-sm" disabled="" title="Rows limit (accesskey + R)" accesskey="R" tabindex="0" aria-label="Rows limit (accesskey + R)">
+                    <option value="-1">No limit</option>
+                    <option value="1000">1000 rows</option>
+                    <option value="500">500 rows</option>
+                    <option value="100">100 rows</option>
+                </select>
+            </div>
+
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-cancel-query" type="button" class="btn btn-sm btn-primary-icon" title="Cancel query (accesskey + Q)" accesskey="Q" tabindex="0" aria-label="Cancel query (accesskey + Q)" disabled="">
+                    <i class="fa fa-stop sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-flash" data-test-selector="execute-refresh-button" type="button" class="btn btn-sm btn-primary-icon" style="width: 32px;" title="Execute/Refresh (F5)" tabindex="0" data-click-counter="4" aria-label="Execute/Refresh (F5)">
+                    <i class="fa fa-play sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-query-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" accesskey="X" title="Execute options (accesskey + X)" tabindex="0" aria-label="Execute options (accesskey + X)">
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-auto-commit" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="auto-commit fa fa-check" aria-hidden="true" role="img"></i>
+                            <span> Auto commit? </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-auto-rollback" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="auto-rollback fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Auto rollback? </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-explain" type="button" class="btn btn-sm btn-primary-icon" title="Explain (F7)" accesskey="" tabindex="0" aria-label="Explain (F7)">
+                    <i class="fa fa-hand-pointer-o sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-explain-analyze" type="button" class="btn btn-sm btn-primary-icon" title="Explain Analyze (Shift+F7)" accesskey="" aria-label="Explain Analyze (Shift+F7)">
+                    <i class="fa fa-list-alt sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-explain-options-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-verbose" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="explain-verbose fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Verbose </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-costs" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="explain-costs fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Costs </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-buffers" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="explain-buffers fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Buffers </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-explain-timing" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="explain-timing fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Timing </span>
+                        </a>
+                    </li>
+                    <li data-min-ver="100000">
+                        <a class="dropdown-item" id="btn-explain-summary" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="explain-summary fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Summary </span>
+                        </a>
+                    </li>
+                    <li data-min-ver="120000" class="d-none">
+                        <a class="dropdown-item" id="btn-explain-settings" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <i class="explain-settings fa fa-check visibility-hidden" aria-hidden="true" role="img"></i>
+                            <span> Settings </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-commit" type="button" class="btn btn-sm btn-primary-icon" title="Commit (Shift+Ctrl+M)" accesskey="" tabindex="0" disabled="" aria-label="Commit (Shift+Ctrl+M)">
+                    <i class="pg-font-icon icon-commit sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <button id="btn-rollback" type="button" class="btn btn-sm btn-primary-icon" title="Rollback (Shift+Ctrl+R)" tabindex="0" disabled="" aria-label="Rollback (Shift+Ctrl+R)">
+                    <i class="pg-font-icon icon-rollback sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+            <div class="btn-group mr-1" role="group" aria-label="">
+                <button id="btn-clear-dropdown" type="button" class="btn btn-sm btn-primary-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Clear (accesskey + L)" accesskey="L" tabindex="0" aria-label="Clear (accesskey + L)">
+                    <i class="fa fa-eraser sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" id="btn-clear" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Clear Query Window </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" id="btn-clear-history" href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="0">
+                            <span> Clear History </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button id="btn-download" type="button" class="btn btn-sm btn-primary-icon" title="Download as CSV/TXT (F8)" tabindex="0" aria-label="Download as CSV/TXT (F8)">
+                    <i class="fa fa-download sql-icon-lg" aria-hidden="true" role="img"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="connection_status_wrapper d-flex">
+            <div id="btn-conn-status" role="status" class="connection_status d-flex justify-content-center align-items-center" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The session is idle and there is no current transaction." data-panel-visible="visible" accesskey="T" tabindex="0" data-original-title="" title="">
+                <i class="pg-font-icon icon-query-tool-connected" aria-hidden="true" title="Connection status (click for details) (accesskey + T)" role="img">
+                </i>
+            </div>
+            <div class="editor-title" style="background-color: ; color: ;">monitortechv2/postgres@PostgreSQL 10 (x86)</div>
+        </div>
+        <div id="editor-panel" tabindex="0">
+            <div id="fetching_data" class="pg-sp-container sql-editor-busy-fetching d-none">
+                <div class="pg-sp-content">
+                    <div class="row">
+                        <div class="col-12 pg-sp-icon sql-editor-busy-icon"></div>
+                    </div>
+                    <div class="row"><div class="col-12 pg-sp-text sql-editor-busy-text">Loading data from the database server and rendering...</div></div>
+                </div>
+            </div>
+        <div class="wcDocker"><div class="wcDockerTransition"></div><div class="wcLayoutPane" style="height: 519.298px; top: 0px; left: 0px; right: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcFrameTopper"><div class="wcFrameTitle"><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Query Editor</a></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" aria-label="Close panel" tabindex="0" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 31px;"><div class="wcPanelTabContent wcPanelTabContentHidden" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div class="sql-editor-explain" tabindex="0"></div><div id="output-panel" tabindex="0"><textarea id="sql_query_tool" tabindex="-1"></textarea></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent" id="1"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="output-panel" tabindex="0"><textarea id="sql_query_tool" tabindex="-1" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-simplescroll" style="font-size: 1em;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 446px; left: 281.234px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" aria-label="SQL editor" tabindex="0"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 322.424px; top: 0.658009px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 42px; margin-bottom: -16px; border-right-width: 34px; min-height: 659px; min-width: 1326.03px; padding-right: 16px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 0px; width: 1553px; height: 21px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 630px; width: 235.234px; height: 21px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 4px; top: 21px; width: 1553px; height: 609px;"></div></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> veiculos</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">m</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">as</span><span class=" CodeMirror-selectedtext"> Monitoramento</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> v</span><span class="cm-variable-2 CodeMirror-selectedtext">.nome</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">as</span><span class=" CodeMirror-selectedtext"> Veiculo</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">m</span><span class=" CodeMirror-selectedtext">."voltBateria" </span><span class="cm-keyword CodeMirror-selectedtext">as</span><span class=" CodeMirror-selectedtext"> bateria</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">m</span><span class=" CodeMirror-selectedtext">."voltAlternador" </span><span class="cm-keyword CodeMirror-selectedtext">as</span><span class=" CodeMirror-selectedtext"> alternador</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">m</span><span class="cm-variable-2 CodeMirror-selectedtext">.</span><span class="cm-variable-2 cm-overlay cm-searching CodeMirror-selectedtext">created_at</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">as</span><span class=" CodeMirror-selectedtext"> Registro </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> monitoramentos </span><span class="cm-keyword CodeMirror-selectedtext">m</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">inner</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">join</span><span class=" CodeMirror-selectedtext"> veiculos v </span><span class="cm-keyword CodeMirror-selectedtext">on</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">m</span><span class="cm-variable-2 CodeMirror-selectedtext">.veiculo_id</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> v</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">where</span><span class=" CodeMirror-selectedtext"> veiculo_id </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-number CodeMirror-selectedtext">1</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">and</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">m</span><span class="cm-variable-2 CodeMirror-selectedtext">.</span><span class="cm-variable-2 cm-overlay cm-searching CodeMirror-selectedtext">created_at</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">between</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-string CodeMirror-selectedtext">'2020-12-01 00:00:00'</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">and</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-string CodeMirror-selectedtext">'2020-12-30 23:59:59'</span><span class="cm-punctuation CodeMirror-selectedtext">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> anomalias</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> anomalias</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class="cm-variable-2 CodeMirror-selectedtext">.nome</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> v</span><span class="cm-variable-2 CodeMirror-selectedtext">.nome</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class=" CodeMirror-selectedtext">."avariaBateria"</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class=" CodeMirror-selectedtext">."avariAlternador"</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class="cm-variable-2 CodeMirror-selectedtext">.</span><span class="cm-variable-2 cm-overlay cm-searching CodeMirror-selectedtext">created_at</span><span class="cm-punctuation CodeMirror-selectedtext">,</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">t</span><span class="cm-variable-2 CodeMirror-selectedtext">.laudo</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> anomalias </span><span class="cm-keyword CodeMirror-selectedtext">a</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">inner</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">join</span><span class=" CodeMirror-selectedtext"> veiculos v </span><span class="cm-keyword CodeMirror-selectedtext">ON</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class="cm-variable-2 CodeMirror-selectedtext">.veiculo_id</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> v</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">inner</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">join</span><span class=" CodeMirror-selectedtext"> clientes </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">on</span><span class=" CodeMirror-selectedtext"> v</span><span class="cm-variable-2 CodeMirror-selectedtext">.cliente_id</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">inner</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">join</span><span class=" CodeMirror-selectedtext"> "tipoAnomalias" </span><span class="cm-keyword CodeMirror-selectedtext">t</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">on</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class=" CodeMirror-selectedtext">."tipoAnomalia_id" </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">t</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">where</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class=" CodeMirror-selectedtext">."avariaBateria" </span><span class="cm-operator CodeMirror-selectedtext">&gt;</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-number CodeMirror-selectedtext">0</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">or</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">a</span><span class=" CodeMirror-selectedtext">."avariAlternador" </span><span class="cm-operator CodeMirror-selectedtext">&gt;</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-number CodeMirror-selectedtext">0</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">and</span><span class=" CodeMirror-selectedtext"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" CodeMirror-selectedtext">v</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-number CodeMirror-selectedtext">1</span><span class="cm-punctuation CodeMirror-selectedtext">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> anomalias</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> veiculos</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class="cm-variable-2 CodeMirror-selectedtext">.nome</span><span class=" CodeMirror-selectedtext"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> clientes</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class="cm-variable-2 CodeMirror-selectedtext">.nome</span><span class=" CodeMirror-selectedtext"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> veiculos v</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">inner</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">join</span><span class=" CodeMirror-selectedtext"> clientes </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">on</span><span class=" CodeMirror-selectedtext"> v</span><span class="cm-variable-2 CodeMirror-selectedtext">.cliente_id</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">c</span><span class="cm-variable-2 CodeMirror-selectedtext">.id</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">select</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-operator CodeMirror-selectedtext">*</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-keyword CodeMirror-selectedtext">from</span><span class=" CodeMirror-selectedtext"> anomalias</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -42px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword CodeMirror-selectedtext">where</span><span class=" CodeMirror-selectedtext"> "tipoAnomalia_id" </span><span class="cm-operator CodeMirror-selectedtext">=</span><span class=" CodeMirror-selectedtext"> </span><span class="cm-number CodeMirror-selectedtext">5</span><span class="cm-punctuation CodeMirror-selectedtext">;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 34px; width: 1px; border-bottom: 0px solid transparent; top: 659px;"></div><div class="CodeMirror-gutters" style="height: 693px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div></td></tr></tbody></table></div></div><div class="wcFrameTitleBar wcTabBottom" style="width: 1619px;"><div class="wcTabScroller" style="left: 0px;"><div class="wcPanelTab" id="0"><div><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Explain</a></div></div><div class="wcPanelTab wcPanelTabActive" id="1"><div><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Query Editor</a></div></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 0px;"></div></div></div></div><div class="wcLayoutPane" style="bottom: 0px; height: 236.202px; left: 0px; right: 0px;"><div class="wcLayoutPane" style="width: 1478.37px; left: 0px; top: 0px; bottom: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcFrameTopper"><div class="wcFrameTitle"><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Data Output</a></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" aria-label="Close panel" tabindex="0" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 31px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent wcPanelTabContentHidden" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="notification_grid" class="sql-editor-notifications" tabindex="0"><table class="backgrid presentation table table-bordered table-hover table-noouter-border table-bottom-border" role="table"><thead><tr><th class="sortable renderable recorded_time" role="columnheader"><button>Recorded time<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable channel" role="columnheader"><button>Event<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable pid" role="columnheader"><button>Process ID<span class="sort-caret" aria-hidden="true"></span></button></th><th class="sortable renderable payload" role="columnheader"><button>Payload<span class="sort-caret" aria-hidden="true"></span></button></th></tr></thead><tbody><tr class="empty"><td colspan="4"><span>No data found</span></td></tr></tbody></table></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent" id="1"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content hide-vertical-scrollbar"><div id="datagrid" class="sql-editor-grid-container text-12 ui-widget slickgrid_278717" tabindex="0" style="height: 201.188px; overflow: hidden; outline: 0px; position: relative;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-header ui-state-default"><div class="slick-header-columns" style="left: -1000px; width: 2604px;" unselectable="on"><div class="ui-state-default slick-header-column" id="slickgrid_278717row-header-column" title="" style="width: 24px;"><span class="slick-column-name"><span data-id="select-all" title="Select/Deselect All"><br><img class="select-all-icon" src="./select-all-icon.png"></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717id" title="Editable column" style="width: 91px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="id">  <span class="column-description">    <span class="column-name">id</span>    <span class="column-type">[PK] bigint</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717nome" title="Editable column" style="width: 172px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="nome">  <span class="column-description">    <span class="column-name">nome</span>    <span class="column-type">character varying (150)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717marca" title="Editable column" style="width: 164px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="marca">  <span class="column-description">    <span class="column-name">marca</span>    <span class="column-type">character varying (90)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717modelo" title="Editable column" style="width: 164px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="modelo">  <span class="column-description">    <span class="column-name">modelo</span>    <span class="column-type">character varying (80)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717ano" title="Editable column" style="width: 156px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="ano">  <span class="column-description">    <span class="column-name">ano</span>    <span class="column-type">character varying (4)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717cor" title="Editable column" style="width: 164px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="cor">  <span class="column-description">    <span class="column-name">cor</span>    <span class="column-type">character varying (10)</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717created_at" title="Editable column" style="width: 210px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="created_at">  <span class="column-description">    <span class="column-name">created_at</span>    <span class="column-type">timestamp without time zone</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717updated_at" title="Editable column" style="width: 210px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="updated_at">  <span class="column-description">    <span class="column-name">updated_at</span>    <span class="column-type">timestamp without time zone</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717tipo_id" title="Editable column" style="width: 69px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="tipo_id">  <span class="column-description">    <span class="column-name">tipo_id</span>    <span class="column-type">bigint</span>  </span></span></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column" id="slickgrid_278717cliente_id" title="Editable column" style="width: 87px;"><div class="slick-header-button editable-column-header-icon"><i class="fa fa-pencil"></i></div><span class="slick-column-name"><span data-cell-type="column-header-row" data-test="output-column-header" data-column-id="cliente_id">  <span class="column-description">    <span class="column-name">cliente_id</span>    <span class="column-type">bigint</span>  </span></span></span><div class="slick-resizable-handle"></div></div></div></div><div class="slick-headerrow ui-state-default" style="display: none;"><div class="slick-headerrow-columns" style="width: 1588px;"></div><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1588px;"></div></div><div class="slick-top-panel-scroller ui-state-default" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport" style="width: 100%; overflow: auto; outline: 0px; position: relative; height: 161.188px;"><div class="grid-canvas" style="height: 145.188px; width: 1588px;"><div class="ui-widget-content slick-row even" style="top:0px"><div class="slick-cell l0 r0"><span data-row="0" data-cell-type="row-header-selector">1</span></div><div class="slick-cell l1 r1" title=""><span style="float:right">1</span></div><div class="slick-cell l2 r2" title="">TRATOR MF</div><div class="slick-cell l3 r3" title="">MASSEY FERGSUN</div><div class="slick-cell l4 r4">MF290</div><div class="slick-cell l5 r5">2016</div><div class="slick-cell l6 r6">VERMELHO</div><div class="slick-cell l7 r7">2020-12-08 19:04:55</div><div class="slick-cell l8 r8">2020-12-08 19:04:55</div><div class="slick-cell l9 r9"><span style="float:right">3</span></div><div class="slick-cell l10 r10"><span style="float:right">1</span></div></div><div class="ui-widget-content slick-row odd" style="top:25px"><div class="slick-cell l0 r0"><span data-row="1" data-cell-type="row-header-selector">2</span></div><div class="slick-cell l1 r1" title=""><span style="float:right">2</span></div><div class="slick-cell l2 r2" title="">Colheitadeira</div><div class="slick-cell l3 r3">NEW HOLLAND</div><div class="slick-cell l4 r4">5070</div><div class="slick-cell l5 r5">2000</div><div class="slick-cell l6 r6">AMARELA</div><div class="slick-cell l7 r7">2020-12-08 19:12:18</div><div class="slick-cell l8 r8">2020-12-08 19:12:18</div><div class="slick-cell l9 r9"><span style="float:right">1</span></div><div class="slick-cell l10 r10"><span style="float:right">1</span></div></div><div class="ui-widget-content slick-row even new-row" style="top:50px"><div class="slick-cell l0 r0"></div><div class="slick-cell l1 r1"></div><div class="slick-cell l2 r2"></div><div class="slick-cell l3 r3"></div><div class="slick-cell l4 r4"></div><div class="slick-cell l5 r5"></div><div class="slick-cell l6 r6"></div><div class="slick-cell l7 r7"></div><div class="slick-cell l8 r8"></div><div class="slick-cell l9 r9"></div><div class="slick-cell l10 r10"></div></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div></div></td></tr></tbody></table></div><div class="wcPanelTabContent wcPanelTabContentHidden" id="2"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div id="history_grid" class="sql-editor-history-container d-flex" tabindex="0"><div style="width: calc(50% - 0.5px);"><div class="toggle-and-history-container">
+            <div class="query-history-toggle">
+                <label class="control-label">
+                    Show queries generated internally by pgAdmin?
+                </label>
+                <div class="toggle btn btn-success btn-xs quick" data-toggle="toggle" style="width: 0px; height: 0px;"><input id="generated-queries-toggle" type="checkbox" class="pgadmin-controls" data-style="quick" data-size="mini" data-on="Yes" data-off="No" data-onstyle="success" data-offstyle="ternary" checked=""><div class="toggle-group"><label class="btn btn-success btn-xs toggle-on">Yes</label><label class="btn btn-ternary btn-xs toggle-off">No</label><span class="toggle-handle btn btn-light btn-xs"></span></div></div>
+            </div>
+            <div id="query_list" class="query-history" tabindex="0"><div class="query-group" data-key="2020 12 08">
+            <div class="date-label">Today - 08/12/2020</div>
+            <ul class="query-entries"><li class="list-item selected" tabindex="0" data-key="19:16:20">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from veiculos
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:16:20</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:14:02">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:14:02</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:13:49">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 1 or a."avariAlternador" &gt; 1 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:13:49</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:13:25">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariAlternador" &lt;&gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:13:25</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:13:11">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &lt;&gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:13:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:12:57">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &lt;&gt; 0 or a."avariAlternador" &lt;&gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:12:57</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:12:46">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:12:46</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:12:35">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 or 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:12:35</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:10:27">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:10:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:10:15">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+ join veiculos v ON a.veiculo_id = v.id
+right join clientes c on v.cliente_id = c.id
+ join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:10:15</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:10:04">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+right join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:10:04</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:09:47">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+left join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:09:47</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:08:59">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:08:59</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:08:53">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 2;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:08:53</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:08:44">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:08:44</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:08:39">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:08:39</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:08:18">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:08:18</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:08:05">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:08:05</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:07:56">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 2;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:07:56</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:07:54">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 2;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:07:54</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:07:25">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+left join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:07:25</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:07:09">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+right join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:07:09</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:06:55">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+full outer join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:06:55</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:05:56">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:05:56</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:05:42">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+left join veiculos v ON a.veiculo_id = v.id
+right join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:05:42</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:05:16">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+left join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and 
+v.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:05:16</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:04:32">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+left join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0 and t.id = 1;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:04:32</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="19:03:53">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+left join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">19:03:53</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:51:50">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+left join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:51:50</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:33:47">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+left join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:33:47</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:33:37">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias 
+left join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:33:37</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:33:25">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias 
+inner join veiculos v ON a.veiculo_id = v.id
+inner join clientes c on v.cliente_id = c.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:33:25</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:31:44">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:31:44</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:30:40">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a in (select c.nome 
+from veiculos v
+inner join clientes c on v.cliente_id = c.id) as c.nome
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:30:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:29:38">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a (select c.nome 
+from veiculos v
+inner join clientes c on v.cliente_id = c.id) as c.nome
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:29:38</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:29:26">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  
+select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a (select c.nome 
+from veiculos v
+inner join clientes c on v.cliente_id = c.id) as c.nome
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:29:26</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:29:12">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a, (select c.nome 
+from veiculos v
+inner join clientes c on v.cliente_id = c.id),
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:29:12</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:23:13">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:23:13</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:23:08">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:23:08</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:21:34">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 or a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:21:34</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:20:56">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 and a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:20:56</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:20:41">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, (select c.nome from veiculos v inner join clientes c on v.cliente_id = c.id) as cliente
+v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 and a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:20:41</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:20:25">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, (select c.nome from veiculos v inner join clientes c on v.cliente_id = c.id)
+v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 and a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:20:25</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:19:15">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &gt; 0 and a."avariAlternador" &gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:19:15</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:18:47">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &lt;&gt; 0 and a."avariAlternador" &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:18:47</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:18:21">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a."avariaBateria" &lt;&gt; 0 or a."avariAlternador" &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:18:21</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:17:45">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a.avariaBateria &lt;&gt; 0 or a.avariAlternador &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:17:45</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:17:19">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a.avariaBateria, a.avariAlternador, a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a.avariaBateria &lt;&gt; 0 or a.avariAlternador &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:17:19</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:17:12">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, v.nome, a.avariaBateria, a.avariAlternador, a.created_at, t.laudo
+from anomalias a,
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a.avariaBateria &lt;&gt; 0 or a.avariAlternador &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:17:12</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:16:45">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a.avariaBateria, a.avariAlternador, a.created_at, t.laudo
+from anomalias a, clientes c
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a.avariaBateria &lt;&gt; 0 or a.avariAlternador &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:16:45</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:16:33">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a.avariaBateria, a.avariAlternador, a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+where a.avariaBateria &lt;&gt; 0 or a.avariAlternador &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:16:33</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:16:22">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select a.id, c.nome, v.nome, a.avariaBateria, a.avariAlternador, a.created_at, t.laudo
+from anomalias a
+inner join veiculos v ON a.veiculo_id = v.id
+inner join "tipoAnomalias" t on a."tipoAnomalias_id" = t.id
+where a.avariaBateria &lt;&gt; 0 or a.avariAlternador &lt;&gt; 0;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:16:22</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:15:07">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:15:07</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:14:12">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome 
+from veiculos v
+inner join clientes c on v.cliente_id = c.id
+where c.id = 1
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:14:12</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:14:01">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome 
+from veiculos v
+inner join clientes c on v.clientes_id = c.id
+where c.id = 1
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:14:01</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:12:51">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from veiculos
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:12:51</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:12:40">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:12:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:12:33">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramento
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:12:33</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="18:01:20">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">18:01:20</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:42:44">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m."voltBateria" as bateria, m."voltAlternador" as alternador, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:42:44</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:42:36">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m."voltBateria" as bateria, m.voltAlternador as alternador, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:42:36</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:42:21">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.voltBateria as bateria, m.voltAlternador as alternador, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:42:21</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:42:10">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.voltBateria as bateria m.voltAlternador as alternador, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:42:10</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:41:51">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m."voltBateria" as bateria m."voltAlternador" as alternador m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:41:51</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:41:27">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.voltBateria as bateria m.voltAlternador as alternador m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:41:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:41:07">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.voltBateria as baterias m. voltAlternador as alternador m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:41:07</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:40:06">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-01 00:00:00' and '2020-12-30 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:40:06</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:39:51">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:39:51</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:37:04">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:37:04</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:36:51">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+where "tipoAnomalia_id" = 5;
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:36:51</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="17:33:52">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">17:33:52</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="16:40:41">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  SELECT PG_RELOAD_CONF();
+              </div>
+              <div class="other-info">
+              <div class="timestamp">16:40:41</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="16:40:35">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  ALTER SYSTEM SET TIMEZONE="GMT+3";
+              </div>
+              <div class="other-info">
+              <div class="timestamp">16:40:35</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="16:40:31">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  ALTER DATABASE monitortechv2 SET TIMEZONE TO 'AMERICA/SAO_PAULO';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">16:40:31</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="16:40:23">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  ALTER DATABASE monitortechv2 SET TIMEZONE TO 'AMERICA/SAO_PAULO';
+ALTER SYSTEM SET TIMEZONE="GMT+3";
+SELECT PG_RELOAD_CONF();
+              </div>
+              <div class="other-info">
+              <div class="timestamp">16:40:23</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="16:40:11">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  ALTER DATABASE EMA SET TIMEZONE TO 'AMERICA/SAO_PAULO';
+ALTER SYSTEM SET TIMEZONE="GMT+3";
+SELECT PG_RELOAD_CONF();
+              </div>
+              <div class="other-info">
+              <div class="timestamp">16:40:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:16:02">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id as Monitoramento, v.nome as Veiculo, m.created_at as Registro from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:16:02</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:15:29">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.nome, m.created_at from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:15:29</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:15:15">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.nome from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:15:15</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:15:02">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.id from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and m.created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:15:02</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:14:44">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from veiculos
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:14:44</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:14:12">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.id from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:14:12</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:14:03">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.id from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:14:03</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:13:39">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.id, m.created_at from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and created_at between '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:13:39</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="15:13:20">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select m.id, v.id, m.created_at from monitoramentos m
+inner join veiculos v on m.veiculo_id = v.id
+where veiculo_id = 1 and created_at between  '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">15:13:20</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:18:11">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+where veiculo_id = 1 and created_at between  '2020-12-03 00:00:00' and '2020-12-03 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:18:11</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:17:57">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+where veiculo_id = 1 and created_at between  '2020-12-03 00:00:00' and '2020-12-09 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:17:57</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:17:35">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+where veiculo_id = 1 and created_at between  '2020-12-03 00:00:00' and '2020-12-07 23:59:59';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:17:35</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:13:43">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+where veiculo_id = 1 and created_at BEETWEN '2020-12-03' and '2020-12-07';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:13:43</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:13:34">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+where veiculo_id = '1' and created_at BEETWEN '2020-12-03' and '2020-12-07';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:13:34</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:13:20">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:13:20</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:12:03">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+where veiculo_id = '1' 
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:12:03</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="14:11:51">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from monitoramentos 
+              </div>
+              <div class="other-info">
+              <div class="timestamp">14:11:51</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="11:58:25">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from veiculos
+              </div>
+              <div class="other-info">
+              <div class="timestamp">11:58:25</div>
+              </div>
+          </div>
+      </li></ul>
+        </div><div class="query-group" data-key="2020 12 07">
+            <div class="date-label">Yesterday - 07/12/2020</div>
+            <ul class="query-entries"><li class="list-item" tabindex="0" data-key="22:46:40">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from anomalias
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:46:40</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:46:17">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, "tipoVeiculos".nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos" on v.id = tipoVeiculos.tipo_id
+where c.nome like 'David';
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:46:17</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:46:02">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, "tipoVeiculos".nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos" on v.id = "tipoVeiculos".tipo_id
+where c.nome like 'David';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:46:02</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:43:06">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, "tipoVeiculos".nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos"  on v.id = "tipoVeiculos".tipo_id
+where c.nome like 'David';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:43:06</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:41:43">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, t.nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos" t on v.id = t.tipo_id
+where c.nome like 'David';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:41:43</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:37:27">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, t.nome,
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos" t on v.id = t.tipo_id
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:37:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:32:25">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from "tipoAnomalias"
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:32:25</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:32:18">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  public * from "tipoAnomalias"
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:32:18</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:31:43">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from veiculos
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:31:43</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:31:24">
+          <div class="entry ">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from clientes
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:31:24</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:29:52">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select tipoAnomalias.laudo
+from pulic."tipoAnomalias" t 
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:29:52</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:29:35">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * laudo
+from pulic."tipoAnomalias" t 
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:29:35</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:55:27">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, t.nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos" as t on v.id = t.tipo_id
+where c.nome like 'David';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:55:27</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:52:35">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select * from 'tipoAnomalias'
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:52:35</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:51:36">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, "tipoVeiculos".nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos t" on v.id = t."tipoVeiculos".tipo_id
+where c.nome like 'David';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:51:36</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:51:29">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select c.nome, v.nome, "tipoVeiculos".nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos t" on v.id = "tipoVeiculos".tipo_id
+where c.nome like 'David';
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:51:29</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:48:45">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select 
+from pulic."tipoAnomalias t" 
+
+select * from "tipoAnomalias"
+select * from clientes
+select * from veiculos
+
+**selectionar veiculos por cliente
+select c.nome, v.nome, "tipoVeiculos".nome
+from veiculos v
+inner join clientes c on c.id = v.cliente_id
+inner join "tipoVeiculos" on v.id = "tipoVeiculos".tipo_id
+where c.nome like 'David';
+
+select * from anomalias
+
+select anomalias.id
+from anomalias
+where "tipoAnoamalia_id" = 2
+
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:48:45</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:48:37">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select anomalias.id
+from anomalias
+where tipoAnoamalia_id = 2
+
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:48:37</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:48:28">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select anomalias.id
+where tipoAnoamalia_id = 2
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:48:28</div>
+              </div>
+          </div>
+      </li><li class="list-item" tabindex="0" data-key="22:48:08">
+          <div class="entry error">
+              <div class="query">
+                  <span id="query_source_icon" class="query-history-icon sql-icon-lg fa fa-play" role="img"></span>
+                  select anomalias
+where tipoAnoamalia_id = 2
+              </div>
+              <div class="other-info">
+              <div class="timestamp">22:48:08</div>
+              </div>
+          </div>
+      </li></ul>
+        </div></div>
+        </div></div><div class="gutter gutter-horizontal" style="width: 1px;"></div><div style="width: calc(50% - 0.5px);"><div id="query_detail" class="query-detail">
+            <div class="error-message-block d-none"></div>
+            <div class="info-message-block d-none"></div>
+            <div class="metadata-block"><div class="metadata"><div class="item">
+                  <span class="value">08/12/2020 19:16:20</span>
+                  <span class="description">Date</span>
+              </div><div class="item">
+                  <span class="value">2</span>
+                  <span class="description">Rows Affected</span>
+              </div><div class="item">
+                  <span class="value">88 msec</span>
+                  <span class="description">Duration</span>
+              </div></div></div>
+            <div class="query-statement-block">
+              <div id="history-detail-query">
+                <button class="btn-copy copy-all" tabindex="0" accesskey="y">Copy</button>
+                <button class="btn-copy-editor copy-to-editor" tabindex="0" accesskey="y">Copy to Query Editor</button>
+                <div><div class="CodeMirror cm-s-default" style="font-size: 1em;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="-1" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 51px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="display: block; right: 0px; left: 0px;"><div style="height: 100%; min-height: 1px; width: 53px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">select</span> <span class="cm-operator">*</span> <span class="cm-keyword">from</span> veiculos</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div>
+              </div>
+            </div>
+            <div>
+              <hr class="block-divider">
+            </div>
+            <div class="message-block">
+              <div class="message">
+                <div class="message-header">Messages</div>
+                <div class="content"><pre class="content-value">Successfully run. Total query runtime: 88 msec.
+2 rows affected.</pre></div>
+              </div>
+            </div>
+        </div></div></div></div></td></tr></tbody></table></div></div><div class="wcFrameTitleBar wcTabLeft" style="width: 235.188px;"><div class="wcTabScroller" style="left: 0px;"><div class="wcPanelTab" id="0"><div><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Notifications</a></div></div><div class="wcPanelTab wcPanelTabActive" id="1"><div><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Data Output</a></div></div><div class="wcPanelTab" id="2"><div><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Query History</a></div></div></div><div class="wcFrameButtonBar" style="min-width: 48px; width: 48px; right: 0px;"><div class="wcFrameButton" title="Scroll tabs to the left." aria-label="Scroll left" tabindex="0"><span class="fa fa-chevron-left"></span></div><div class="wcFrameButton" title="Scroll tabs to the right." aria-label="Scroll right" tabindex="0"><span class="fa fa-chevron-right"></span></div></div></div></div></div><div class="wcLayoutPane" style="right: 0px; width: 139.632px; top: 0px; bottom: 0px;"><div class="wcFrame wcWide wcTall"><div class="wcFrameTitleBar wcTabTop" style="width: 139.625px;"><div class="wcFrameTitle"><a href="http://127.0.0.1:60583/datagrid/panel/8965055?is_query_tool=true&amp;sgid=1&amp;sid=2&amp;server_type=pg&amp;did=65676#" tabindex="-1" class="panel-link-heading">Messages</a></div><div class="wcTabScroller" style="left: 0px;"></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px; right: 0px;"></div></div><div class="wcFrameButtonBar" style="min-width: 0px; width: 0px;"><div class="wcFrameButton" title="Close the currently active panel tab" aria-label="Close panel" tabindex="0" style="display: none;"><div class="fa fa-close"></div></div><div class="wcFrameButton" title="Collapse the active panel" style="display: none;"><div class="fa fa-download"></div>C</div></div><div class="wcFrameCenter wcPanelBackground wcScrollableX wcScrollableY" style="left: 0px; right: 0px; bottom: 0px;"><div class="wcPanelTabContent" id="0"><table class="wcLayout wcWide wcTall"><tbody><tr><td><div class="pg-panel-content"><div role="status" class="sql-editor-message" tabindex="0">Successfully run. Total query runtime: 88 msec.
+2 rows affected.</div></div></td></tr></tbody></table></div></div></div></div><div class="wcSplitterBar wcTall wcSplitterBarV" style="left: 1475.37px; top: 0px; height: 236.188px;"><div class="wcSplitterBarLine"></div></div></div><div class="wcSplitterBar wcWide wcSplitterBarH" style="top: 516.298px; left: 0px;"><div class="wcSplitterBarLine"></div></div></div></div>
+    </div>
+</div>
+<script>
+            require(['sources/generated/browser_nodes', 'sources/generated/codemirror', 'sources/generated/slickgrid'], function() {
+    require(['sources/generated/sqleditor'], function(ctx) {
+        var $ = pgAdmin.SqlEditor.jquery,
+            S = pgAdmin.SqlEditor.S,
+            editorPanel = $('.sql-editor'),
+            loadingDiv = $('#fetching_data'),
+            msgDiv = loadingDiv.find('.sql-editor-busy-text');
+
+        // Register unload event on window close.
+        /* If opened in new tab, close the connection only on tab/window close and
+         * not on refresh attempt because the user may cancel the reload
+         */
+        if(window.opener) {
+          $(window).on('unload', function(ev) {
+            $.ajax({
+              method: 'DELETE',
+              url: "/datagrid/" + "close/" + 8965055
+            });
+          });
+        } else {
+          $(window).on('beforeunload', function(ev) {
+            $.ajax({
+              method: 'DELETE',
+              url: "/datagrid/" + "close/" + 8965055
+            });
+          });
+        }
+
+        // Get the controller object from pgAdmin.SqlEditor
+        var sqlEditorController = pgAdmin.SqlEditor.create(editorPanel);
+
+        // Listen on events to show/hide loading-icon and change messages.
+        sqlEditorController.on('pgadmin-sqleditor:loading-icon:message', function(msg) {
+            msgDiv.text(msg);
+          }).on('pgadmin-sqleditor:loading-icon:show', function(msg) {
+            loadingDiv.removeClass('d-none');
+            msgDiv.text(msg);
+          }).on('pgadmin-sqleditor:loading-icon:hide', function() {
+            loadingDiv.addClass('d-none');
+          });
+                    var script_type_url = '';
+                // Start the query tool.
+        sqlEditorController.start(
+            8965055,
+            {"is_query_tool": "true", "sgid": "1", "sid": "2", "server_type": "pg", "did": "65676", "title": "monitortechv2/postgres@PostgreSQL 10 (x86)"},
+            '{"floating":[],"root":{"type":"wcSplitter","horizontal":false,"isDrawer":false,"pane0":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"bottom","pos":{"x":2.8961303462321792,"y":0.6361997940267765},"size":{"x":243,"y":485},"tab":1,"panels":[{"type":"wcPanel","panelType":"explain","size":{"x":812,"y":406.75},"customData":{}},{"type":"wcPanel","panelType":"sql_panel","size":{"x":103,"y":336.766},"customData":{}}]},"pane1":{"type":"wcSplitter","horizontal":true,"isDrawer":false,"pane0":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"left","pos":{"x":0.14788004136504654,"y":1.540785000253717},"size":{"x":481,"y":157},"tab":1,"panels":[{"type":"wcPanel","panelType":"notifications","size":{"x":481,"y":157},"customData":{}},{"type":"wcPanel","panelType":"data_output","size":{"x":103,"y":326.828},"customData":{}},{"type":"wcPanel","panelType":"history","size":{"x":103,"y":326.828},"customData":{}}]},"pane1":{"type":"wcFrame","floating":false,"isFocus":false,"tabOrientation":"top","pos":{"x":0.5747663551401869,"y":1.5384571472065762},"size":{"x":963,"y":161},"tab":0,"panels":[{"type":"wcPanel","panelType":"messages","size":{"x":963,"y":161},"customData":{}}]},"pos":0.5752177355502771},"pos":0.6833855799373041}}'
+        );
+
+        // If opening from schema diff, set the generated script to the SQL Editor
+
+        var schema_ddl_diff = (window.opener !== null) ? window.opener.pgAdmin.ddl_diff : (window.parent !== null) ? window.parent.pgAdmin.ddl_diff : window.top.pgAdmin.ddl_diff;
+        sqlEditorController.set_value_to_editor(schema_ddl_diff);
+        if (window.opener !== null) window.opener.pgAdmin.ddl_diff = '';
+        else if (window.parent !== null) window.parent.pgAdmin.ddl_diff = '';
+        else if (window.top !== null) window.top.pgAdmin.ddl_diff = '';
+
+    });
+});
+
+</script>
+
+
+<div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset" aria-label="reset"></button><div class="ajs-commands"><button class="ajs-pin" aria-label="Pin"></button><button class="ajs-maximize" aria-label="Maximize" tabindex="0"></button><button class="ajs-close" aria-label="Close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset" aria-label="reset"></button></div></div></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset" aria-label="reset"></button><div class="ajs-commands"><button class="ajs-pin" aria-label="Pin"></button><button class="ajs-maximize" aria-label="Maximize" tabindex="0"></button><button class="ajs-close" aria-label="Close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"><p></p><label for="alertify-prompt-0" style="display: none;">HiddenLabel</label><input class="form-control" type="text" id="alertify-prompt-0"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-secondary fa fa-lg fa-times pg-alertify-button">Cancel</button><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset" aria-label="reset"></button></div></div></div><div class="alertify ajs-hidden  ajs-movable ajs-pinnable ajs-zoom"><div class="ajs-dimmer"></div><div class="ajs-modal" tabindex="0"><div class="ajs-dialog" tabindex="0"><button class="ajs-reset" aria-label="reset"></button><div class="ajs-commands"><button class="ajs-pin" aria-label="Pin"></button><button class="ajs-maximize" aria-label="Maximize" tabindex="0"></button><button class="ajs-close" aria-label="Close"></button></div><div class="ajs-header">AlertifyJS</div><div class="ajs-body"><div class="ajs-content"></div></div><div class="ajs-footer"><div class="ajs-auxiliary ajs-buttons"></div><div class="ajs-primary ajs-buttons"><button class="ajs-button btn btn-primary fa fa-lg fa-check pg-alertify-button">OK</button></div></div><div class="ajs-handle"></div><button class="ajs-reset" aria-label="reset"></button></div></div></div><div class="alertify-notifier ajs-bottom ajs-right"></div></body></html>

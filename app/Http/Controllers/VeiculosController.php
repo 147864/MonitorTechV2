@@ -8,7 +8,7 @@ use App\Http\Requests\VeiculoRequest;
 
 class VeiculosController extends Controller{
     public function index(){
-        $veiculos = Veiculos::orderBy('nome')->paginate(6);
+        $veiculos = Veiculos::orderBy('nome')->paginate(10);
         return view('Veiculos.index', ['veiculos'=>$veiculos]);// NESSA LINHA VAI DAR MERDA
     }
 

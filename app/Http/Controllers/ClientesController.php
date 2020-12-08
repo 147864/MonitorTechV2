@@ -8,7 +8,7 @@ use App\Http\Requests\ClienteRequest;
 
 class ClientesController extends Controller{
     public function index(){
-        $clientes = Clientes::orderBy('nome')->paginate(6);
+        $clientes = Clientes::orderBy('nome')->paginate(10);
         return view('clientes.index', ['clientes'=>$clientes]);
     }
 

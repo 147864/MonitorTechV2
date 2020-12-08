@@ -10,8 +10,12 @@ use App\Http\Requests\MonitoramentoRequest;
 
 class MonitoramentosController extends Controller{
     public function index(){
-        $monitoramentos = Monitoramentos::orderBy('id')->paginate(6);
+        $monitoramentos = Monitoramentos::orderBy('id')->paginate(10);
         return view('monitoramentos.index', ['monitoramentos'=>$monitoramentos]);// NESSA LINHA VAI DAR MERDA
+    }
+
+    public function relFiltros(){
+        return view ('monitoramentos.relFiltros');
     }
 
     public function create (){
@@ -21,29 +25,66 @@ class MonitoramentosController extends Controller{
     public function store(MonitoramentoRequest $request){ //request encapsula os campos recebidos do formulário para enviar para o banco
         $novo_monitoramento = $request->all();
         $monitoramento = Monitoramentos::create($novo_monitoramento);
+
+        $ok = "ok";
+        $ok = floatval($ok);
         
-        if ($request->voltBateria >= 12 || $request->voltBateria < 13 ) {
-            if($request->voltAlternador >= 12 || $request->voltAlternador < 13 ){
+        if ($request->voltBateria >= 12 && $request->voltBateria < 14 ) {
+            if($request->voltAlternador >= 12 && $request->voltAlternador < 14 ){
                 $tipo_anomalia = 1;
+                
+                Anomalias::create([
+                    'avariaBateria' => $ok,
+                    'avariAlternador' => $ok,
+                    "veiculo_id" => $request->veiculo_id,
+                    'monitoramento_id' => $monitoramento->id,
+                    "tipoAnomalia_id" => $tipo_anomalia,
+                ]);
+                
             }else if($request->voltAlternador < 12){
-                $tipo_anomalia = 3;
+                $tipo_anomalia = 2;
+
+                Anomalias::create([
+                    'avariaBateria' => $ok,
+                    'avariAlternador' => $request->voltAlternador,
+                    "veiculo_id" => $request->veiculo_id,
+                    'monitoramento_id' => $monitoramento->id,
+                    "tipoAnomalia_id" => $tipo_anomalia,
+                ]);
             }
             else if($request->voltAlternador > 13){
-                $tipo_anomalia = 4;
+                $tipo_anomalia = 3;
+
+                Anomalias::create([
+                    'avariaBateria' => $ok,
+                    'avariAlternador' => $request->voltAlternador,
+                    "veiculo_id" => $request->veiculo_id,
+                    'monitoramento_id' => $monitoramento->id,
+                    "tipoAnomalia_id" => $tipo_anomalia,
+                ]);
             }
         }
-        else if($request->voltBateria < 12) {
-            $tipo_anomalia = 2;
-        }
-                
-        Anomalias::create([
-            'avariaBateria' => $request->voltBateria,
-            'avariAlternador' => $request->voltAlternador,
-            "veiculo_id" => $request->veiculo_id,
-            'monitoramento_id' => $monitoramento->id,
-            "tipoAnomalia_id" => $tipo_anomalia,
-        ]);
-
+        if($request->voltBateria < 12) {
+            if($request->voltAlternador >= 12 && $request->voltAlternador < 14){
+                $tipo_anomalia = 4;
+                Anomalias::create([
+                    'avariaBateria' => $request->voltBateria,
+                    'avariAlternador' => $ok,
+                    "veiculo_id" => $request->veiculo_id,
+                    'monitoramento_id' => $monitoramento->id,
+                    "tipoAnomalia_id" => $tipo_anomalia,
+                ]);
+            } else if($request->voltAlternador < 12){
+                $tipo_anomalia = 5;
+                Anomalias::create([
+                    'avariaBateria' =>$request->voltBateria,
+                    'avariAlternador' =>$request->voltAlternador,
+                    "veiculo_id" => $request->veiculo_id,
+                    'monitoramento_id' => $monitoramento->id,
+                    "tipoAnomalia_id" => $tipo_anomalia,
+                ]);                
+            }
+        } 
         return redirect()->route('monitoramentos');
     }
 
@@ -68,35 +109,4 @@ class MonitoramentosController extends Controller{
         Monitoramentos::find($id)->update($request->all());
         return redirect()->route('monitoramentos');
     }
-
-    /*
-        public function comparaMonitoradoComPadrao($request, $bateria, $alternador){
-        $padraoBat = DB::table('tipoVeiculos')->where('name', 'Colheitadeira');
-        return teste;
-    }
-
-    public function verificaAvaria(Request $voltBateria, $voltAlternador){
-        $batMonitorada = $voltBateria->get('voltBateria');
-        $altMonitorado = $voltAalternador->get('voltAalternador');
-        
-        $batPadrao = $bateria->get('bateria');
-        $altPadrao = $alternador->get('alternador');
-
-        if ($batPadrao == $batMonitorada || altPadrao == altMonitorado) {
-            //gera anomalia com tipo de anomalias que está tudo bem
-            //break ???;
-        } elseif ($batPadrao < $batMonitorada || altPadrao == altMonitorado) {
-            //gera anomalias com tipo de anomalias bateria com defeito alt ok
-        } elseif ($batPadrao > $batMonitorada || altPadrao == altMonitorado) {
-            //gera anomalias com tipo de anomalias bateria com defeito alt ok
-        } elseif ($batPadrao == $batMonitorada || altPadrao < altMonitorado) {
-            //gera anomalias tipo de anomalias bateria ok e defeito no alt
-        } else($batPadrao == $batMonitorada || altPadrao > altMonitorado){
-            //gera anomalias tipo de anomalias bateria ok e defeito no alt
-        } 
-            
-        return redirect()->route('monitoramentos');
-    }
-    */
-
 }

@@ -15,29 +15,28 @@
     {!! Form::close() !!}
     <br>
 
-
-    <div class="container">
-        <table class="table table-bordered table-striped table-sm">
+    <div class="container-fluid">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Identificador</th>
-                    <th>Monitoramento</th>
+                    <th width="10%">Monitoramento</th>
                     <th>Veiculo</th>
-                    <th>Tipo de Anomalia</th>
-                    <th>Avaria de Alternador</th>
-                    <th>Avaria de Bateria</th>
+                    <th width="2px">Bateria</th>
+                    <th width="2px">Alternador</th>
+                    <th width="30%">Laudo</th>
+                    <th width="30%">Possivel Solução</th>
+
                 </tr>
             </thead>
             <tbody>
                 @forelse($anomalias as $anomalia)
                     <tr>
-                        <td>{{ $anomalia->id }}</td>
                         <td>{{ $anomalia->monitoramento->id }}</td>
                         <td>{{ $anomalia->veiculo->nome }}</td>
-                        <td>{{ $anomalia->id }}</td>
                         <td>{{ $anomalia->avariaBateria }}</td>
                         <td>{{ $anomalia->avariAlternador }}</td>
-                        <td>
+                        <td>{{ $anomalia->tipoanomalia->laudo }}</td>
+                        <td>{{ $anomalia->tipoAnomalia->solucao }}</td>
                         </td>
                     </tr>
                 @empty
