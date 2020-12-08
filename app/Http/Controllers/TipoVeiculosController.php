@@ -10,7 +10,7 @@ class TipoVeiculosController extends Controller
 {
     public function index()
     {
-        $tipoVeiculos = TipoVeiculos::orderBy('nome')->paginate(6);
+        $tipoVeiculos = TipoVeiculos::orderBy('nome')->paginate(10);
         return view('tipoVeiculos.index', ['tipoVeiculos'=>$tipoVeiculos]);// NESSA LINHA VAI DAR MERDA
     }
 

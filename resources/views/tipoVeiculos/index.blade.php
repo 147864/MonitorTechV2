@@ -15,10 +15,9 @@
     {!! Form::close() !!} 
     <br>   
 
-
-    <div class="container">
-        <a href="{{ route('tipoVeiculos.create') }}" class="btn btn-info btn-sm">Novo</a>
-        <table class="table table-bordered table-striped table-sm">
+    <div class="container-fluid">
+        <a href="{{ route('tipoVeiculos.create') }}" class="btn btn-primary btn-lg">Adicionar</a>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -34,8 +33,8 @@
                         <td>{{ $tipoVeiculo->bateria }}</td>
                         <td>{{ $tipoVeiculo->alternador }}</td>
                         <td>
-                            <a href="{{ route('tipoVeiculos.edit', $tipoVeiculo->id) }}" class="btn-sm btn-warning btn-sm">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $tipoVeiculo->id }})" class="btn-sm btn-danger">Remover</a>
+                            <a href="{{ route('tipoVeiculos.edit', $tipoVeiculo->id) }}"class="far fa-edit"></a>
+                            <a href="#" onclick="return ConfirmaExclusao({{ $tipoVeiculo->id }})"  class="fas fa-trash-alt"></a>
                         </td>
                     </tr>
                 @empty

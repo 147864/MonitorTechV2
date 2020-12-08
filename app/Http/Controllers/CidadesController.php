@@ -15,8 +15,8 @@ class CidadesController extends Controller{
         else 
             $cidades = Cidades::where('nome','like', '%'.$filtragem.'%')
                                     ->orderBy("nome")
-                                    ->paginate(10)
-                                    ->setpath('cidades?desc_filtro='+$filtragem);//A non-numeric value encountered ???? ta retornando essa m
+                                    ->paginate(10);
+                                    //->setpath(    'cidades?desc_filtro='+$filtragem);//A non-numeric value encountered ???? ta retornando essa m
 
         return view('cidades.index', ['cidades'=>$cidades]);
     }

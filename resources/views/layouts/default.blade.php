@@ -40,5 +40,16 @@
             })
         }
 
+        function GeraAnomalia() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'warning',
+                title: 'Anomalia Gerada!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }   
+        
+
     </script>
 @stop

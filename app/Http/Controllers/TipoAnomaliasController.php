@@ -8,7 +8,7 @@ use App\Http\Requests\TipoAnomaliaRequest;
 
 class TipoAnomaliasController extends Controller{
     public function index(){
-        $tipoanomalias = TipoAnomalias::orderBy('id')->paginate(6);
+        $tipoanomalias = TipoAnomalias::orderBy('id')->paginate(10);
         return view('tipoanomalias.index', ['tipoanomalias'=>$tipoanomalias]);// NESSA LINHA VAI DAR MERDA
     }
 

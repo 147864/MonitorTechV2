@@ -18,6 +18,6 @@ class Anomalias extends Model
     }
 
     public function tipoAnomalia(){
-        return $this->belongsTo("App\TipoAnomalias");
+        return $this->belongsTo("App\TipoAnomalias", "tipoAnomalia_id");
     }
 }

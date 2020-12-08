@@ -14,14 +14,13 @@
         </div>
     {!! Form::close() !!}
     <br>
-
-    <div class="container">
-        <a href="{{ route('cidades.create') }}" class="btn btn-info btn-sm">Novo</a>
-        <table class="table table-bordered table-striped table-sm">
+    <div class="container-fluid">
+        <a href="{{ route('cidades.create') }}" class="btn btn-primary btn-lg">Adicionar</a>
+        <table class="table table-striped ">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>UF</th>
+                    <th width="80%">Nome</th>
+                    <th width="5%">UF</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -31,8 +30,8 @@
                         <td>{{ $cidade->nome }}</td>
                         <td>{{ $cidade->uf }}</td>
                         <td>
-                            <a href="{{ route('cidades.edit', $cidade->id) }}" class="btn-sm btn-warning btn-sm">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $cidade->id }})" class="btn-sm btn-danger">Remover</a>
+                            <a href="{{ route('cidades.edit', $cidade->id) }}"class="far fa-edit"></a>
+                            <a href="#" onclick="return ConfirmaExclusao({{ $cidade->id }})"  class="fas fa-trash-alt"></a>
                         </td>
                     </tr>
                 @empty

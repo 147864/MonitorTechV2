@@ -48,6 +48,8 @@ Route::group(['middleware' =>'auth'], function(){
         Route::get('{id}/edit', ['as'=>'monitoramentos.edit',      'uses'=>'MonitoramentosController@edit'   ]);
         Route::put('{id}/update', ['as'=>'monitoramentos.update',    'uses'=>'MonitoramentosController@update' ]);
         Route::post('store', ['as'=>'monitoramentos.store',     'uses'=>'MonitoramentosController@store'  ]);
+        Route::get('relFiltros', ['as'=>'monitoramentos.relFiltros',    'uses'=>'MonitoramentosController@relFiltros' ]);
+        Route::any('relMonitoramentos', ['as'=>'monitoramentos.relMonitoramentos',    'uses'=>'PdfController@monitoramentos']);
     });
 
     Route::group(['prefix'=>'anomalias', 'where'=>['id'=>'[0-9]+']], function () {
@@ -57,6 +59,8 @@ Route::group(['middleware' =>'auth'], function(){
         Route::get('{id}/edit', ['as'=>'anomalias.edit',      'uses'=>'AnomaliasController@edit'   ]);
         Route::put('{id}/update', ['as'=>'anomalias.update',    'uses'=>'AnomaliasController@update' ]);
         Route::post('store', ['as'=>'anomalias.store',     'uses'=>'AnomaliasController@store'  ]);
+        Route::get('relFiltros', ['as'=>'anomalias.relFiltros',    'uses'=>'AnomaliasController@relFiltros' ]);
+        Route::any('relAnomalias', ['as'=>'monitoramentos.relAnomalias',    'uses'=>'PdfController@anomalias']);
     });
 
     Route::group(['prefix'=>'tipoAnomalias', 'where'=>['id'=>'[0-9]+']], function () {
@@ -68,7 +72,13 @@ Route::group(['middleware' =>'auth'], function(){
         Route::post('store', ['as'=>'tipoanomalias.store',     'uses'=>'TipoAnomaliasController@store'  ]);
     });
 
-    Route::get('pdf', 'PdfController@geraPdf');
+    Route::get('RelMonitoramentos', 'PdfController@monitoramentos');
+    
+    Route::get('RelClientes', 'PdfController@clientes');
+    Route::get('RelTipoVeiculos', 'PdfController@tipoVeiculos');
+    Route::get('RelVeiculos', 'PdfController@veiculos');
+    Route::get('RelTipoAnomalias', 'PdfController@tipoAnomalias');
+    Route::get('RelAnomalias', 'PdfController@anomalias');
 });
 
 

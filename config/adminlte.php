@@ -258,15 +258,15 @@ return [
             'icon' => 'fas fa-tractor',
         ],
         [
-            'text' => 'Gerar Monitoramento',
-            'url'  => 'monitoramentos',
-            'icon' => 'fas fa-car-battery',
-        ],  
-        [
             'text' => 'Tipos de Anomalias',
             'url'  => 'tipoAnomalias',
             'icon' => 'fab fa-searchengin',
         ],
+        [
+            'text' => 'Gerar Monitoramento',
+            'url'  => 'monitoramentos',
+            'icon' => 'fas fa-car-battery',
+        ],  
         [
             'text' => 'Anomalias',
             'url'  => 'anomalias',
@@ -274,31 +274,43 @@ return [
         ],
         
         [
-            'text'    => 'Relatórios',
+            'text'    => 'Relatórios de Cadastros',
             'icon'    => 'fas fa-print',
             'submenu' => [
                 [
                     'text' => 'Clientes',
-                    'url'  => 'pdf',
+                    'url'  => 'RelClientes',
                 ],
                 [
                     'text' => 'Tipo de Veículos',
-                    'url'  => '#',
+                    'url'  => 'RelTipoVeiculos',
                 ],
                 [
                     'text' => 'Veículos',
-                    'url'  => '#',
+                    'url'  => 'RelVeiculos',
                 ],
                 [
-                    'text' => 'Registro de Monitoramentos',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Registro de Anomalias',
-                    'url'  => '#',
+                    'text' => 'Tipo de Anomalias',
+                    'url'  => 'RelTipoAnomalias',
                 ],
             ],
         ],
+
+        [
+            'text'    => 'Relatórios Gerenciais',
+            'icon'    => 'fas fa-print',
+            'submenu' => [
+                [
+                    'text' => 'Registro de Monitoramentos',
+                    'url'  => 'monitoramentos\relFiltros',
+                ],
+                [
+                    'text' => 'Registro de Anomalias',
+                    'url'  => 'anomalias\relFiltros',
+                ],
+            ],
+        ],
+
     ],
 
     /*

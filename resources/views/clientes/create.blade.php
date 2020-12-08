@@ -13,13 +13,13 @@
     <h3>Novo Cliente</h3>
     {!! Form::open(['route'=>'clientes.store']) !!}
 
-    <div class="form-group cpf-mask">
+    <div class="form-group">
         {!! Form::label('nome', 'Nome:') !!}
         {!! Form::text('nome', null, ['class' => 'form-control', 'required']) !!}
         
     </div>
 
-    <div class="form-group ">
+    <div class="form-group">
         {!! Form::label('cpf', 'CPF:') !!}
         {!! Form::text('cpf', null, ['class' => 'form-control', 'required']) !!}
     </div>
@@ -38,7 +38,7 @@
 
     <div class="form-group">
         {!! Form::label('endereco', 'Endereço:') !!}
-        {!! Form::text('endereco', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::text('endereco', null, ['class' => 'form-control', 'required' ]) !!}
     </div>
 
     <div class="form-group">
@@ -58,7 +58,7 @@
 
     <div class="form-group">
         {!! Form::label('email', 'E-mail:') !!}
-        {!! Form::text('email', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::email('email', null, ['class' => 'form-control', 'required']) !!}
     </div>
     
 

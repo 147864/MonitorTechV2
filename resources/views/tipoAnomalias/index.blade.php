@@ -15,9 +15,8 @@
     {!! Form::close() !!}
     <br>
 
-
-    <div class="container">
-        <table class="table table-bordered table-striped table-sm">
+    <div class="container-fluid">
+        <table class=" table table-striped">
             <thead>
                 <tr>
                     <th>Identificador</th>

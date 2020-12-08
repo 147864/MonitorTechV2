@@ -15,19 +15,17 @@
     {!! Form::close() !!}    
         <br>
 
-
-    <div class="container">
-        <a href="{{ route('monitoramentos.create') }}" class="btn btn-info btn-sm">Novo</a>
-        <table class="table table-bordered table-striped table-sm">
+         
+    <div class="container-fluid">
+        <a href="{{ route('monitoramentos.create') }}" class="btn btn-primary btn-lg">Adicionar</a>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Identificador</th>
                     <th>Veículo</th>
                     <th>Bateria</th>
                     <th>Alternador</th>
-                    <th>Hora</th>
-                    
-                    <th>Ações</th>
+                    <th>Data - Hora</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,10 +35,7 @@
                         <td>{{ $monitoramento->veiculo->nome }}</td>
                         <td>{{ $monitoramento->voltBateria }}</td>
                         <td>{{ $monitoramento->voltAlternador }}</td>
-                        <td>{{ $monitoramento->created_at }}</td>
-                        <td>
-                            <a href="{{ route('monitoramentos.edit', $monitoramento->id) }}" class="btn-sm btn-warning btn-sm">Editar</a>
-                            <a href="#" onclick="return ConfirmaExclusao({{ $monitoramento->id }})" class="btn-sm btn-danger">Remover</a>
+                        <td>{{ \Carbon\Carbon::parse($monitoramento->created_at)->format('d/m/Y - H:i:s')}}</td>
                         </td>
                     </tr>
                 @empty
