@@ -3,19 +3,21 @@
 @section('content')
     <h1>Monitoramentos</h1>
 
-    {!! Form::open(['name'=>'form_name', 'route'=>'monitoramentos']) !!}
-        <div class="sidebar-form">
-            <div class="input-group" >
-                <input type="text" name="desc_filtro" class="form-control" style="width: 80% !important" placeholder="Pesquisa..." >
-                <span class="input-group-btn">
-                    <button type="submit" name="search" id="search-btn" class="btn btn-default"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
+    {!! Form::open(['name' => 'form_name', 'route' => 'monitoramentos']) !!}
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="desc_filtro" class="form-control" style="width: 80% !important"
+                placeholder="Pesquisa...">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-default"><i
+                        class="fa fa-search"></i></button>
+            </span>
         </div>
-    {!! Form::close() !!}    
-        <br>
+    </div>
+    {!! Form::close() !!}
+    <br>
 
-         
+
     <div class="container-fluid">
         <a href="{{ route('monitoramentos.create') }}" class="btn btn-primary btn-lg">Adicionar</a>
         <table class="table table-striped">
@@ -33,9 +35,17 @@
                     <tr>
                         <td>{{ $monitoramento->id }}</td>
                         <td>{{ $monitoramento->veiculo->nome }}</td>
-                        <td>{{ $monitoramento->voltBateria }}</td>
-                        <td>{{ $monitoramento->voltAlternador }}</td>
-                        <td>{{ \Carbon\Carbon::parse($monitoramento->created_at)->format('d/m/Y - H:i:s')}}</td>
+                        @if ($monitoramento->voltBateria >=12 && $monitoramento->voltBateria <14)
+                            <td><span class='badge badge-success'>{{ $monitoramento->voltBateria }} </span></td>
+                        @else
+                            <td><span class='badge badge-danger'>{{ $monitoramento->voltBateria }}</span></td>
+                        @endif
+                        @if ($monitoramento->voltAlternador >=12 && $monitoramento->voltAlternador <14)
+                        <td><span class='badge badge-success'>{{ $monitoramento->voltAlternador }} </span></td>
+                    @else
+                        <td><span class='badge badge-danger'>{{ $monitoramento->voltAlternador }}</span></td>
+                    @endif
+                        <td>{{ \Carbon\Carbon::parse($monitoramento->created_at)->format('d/m/Y - H:i:s') }}</td>
                         </td>
                     </tr>
                 @empty
@@ -50,5 +60,5 @@
 @endsection
 
 @section('table-delete')
-    "monitoramentos"
+"monitoramentos"
 @endsection

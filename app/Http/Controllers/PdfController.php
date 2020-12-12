@@ -76,7 +76,7 @@ class PdfController extends Controller
         and c.id = ? 
         and v.id = ? 
         and a.created_at between ? and ?',[$cliente,$veiculo,$data_ini,$data_fim]);
-    //        dd($query);
+        //dd($query);
 
         $pdf = PDF::loadView('relatorios\anomalias', ['query'=>$query]);
         return $pdf->setPaper('a4')->stream('anomalias.pdf');
