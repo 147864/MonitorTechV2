@@ -26,7 +26,7 @@ class ClienteRequest extends FormRequest
         return [
             //['nome', 'cpf', 'rg','idCidade','endereco','bairro','cep', 'telefone','email'];
             'nome' => 'required',
-            'cpf' => 'required|cpf|min:13|max:13',
+            'cpf' => 'required|cpf',
             'rg' => 'required',
             'cidade_id' => 'required',
             'endereco' => 'required',

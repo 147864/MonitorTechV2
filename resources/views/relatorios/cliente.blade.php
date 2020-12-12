@@ -58,6 +58,7 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+        tr:nth-child(even) {background-color: #f2f2f2;}
     </style>
     <h1>Relatório de Clientes</h1>
 </head>

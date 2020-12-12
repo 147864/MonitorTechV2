@@ -33,8 +33,16 @@
                     <tr>
                         <td>{{ $anomalia->monitoramento->id }}</td>
                         <td>{{ $anomalia->veiculo->nome }}</td>
-                        <td>{{ $anomalia->avariaBateria }}</td>
-                        <td>{{ $anomalia->avariAlternador }}</td>
+                        @if ($anomalia->avariaBateria == 0)
+                            <td><span class='badge badge-success'>{{ 'OK' }} </span></td>
+                        @else
+                            <td><span class='badge badge-danger'>{{ $anomalia->avariaBateria . ' v' }}</span></td>
+                        @endif
+                        @if ($anomalia->avariAlternador == 0)
+                        <td><span class='badge badge-success'>{{ 'OK' }} </span></td>
+                    @else
+                        <td><span class='badge badge-danger'>{{ $anomalia->avariAlternador . ' v' }}</span></td>
+                    @endif
                         <td>{{ $anomalia->tipoanomalia->laudo }}</td>
                         <td>{{ $anomalia->tipoAnomalia->solucao }}</td>
                         </td>

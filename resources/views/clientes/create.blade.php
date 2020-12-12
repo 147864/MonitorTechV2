@@ -21,7 +21,7 @@
 
     <div class="form-group">
         {!! Form::label('cpf', 'CPF:') !!}
-        {!! Form::text('cpf', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::text('cpf', null, ['class' => 'form-control', 'required',]) !!}
     </div>
 
     <div class="form-group">

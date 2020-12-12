@@ -12,7 +12,7 @@ class CidadesController extends Controller{
         $filtragem = $filtro->get('desc_filtro');
         if ($filtragem == null)
             $cidades = Cidades::orderBy('nome')->paginate(10);    
-        else 
+        else
             $cidades = Cidades::where('nome','like', '%'.$filtragem.'%')
                                     ->orderBy("nome")
                                     ->paginate(10);
