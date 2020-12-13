@@ -10,20 +10,13 @@
         </ul>
     @endif
 
-    <h3 style="text-align: center">Relatório Gerencial de Anomalias</h3>
-    {!! Form::open(['route'=>'anomalias.relAnomalias']) !!}
+    <h3 style="text-align: center">Relatório Gerencial de Anomalias por Clientes</h3>
+    {!! Form::open(['route'=>'anomalias.relAnomaliasClientes']) !!}
 
     <div class="form-group">
         {!! Form::label('cliente_id', 'Cliente:') !!}
         {!! Form::select('cliente_id',
                         \App\Clientes::orderBy('nome')->pluck('nome', 'id')->toArray(),
-                        null, ['class'=>'form-control', 'required']) !!}
-    </div>
-    
-    <div class="form-group">
-        {!! Form::label('veiculo_id', 'Veículo:') !!}
-        {!! Form::select('veiculo_id',
-                        \App\Veiculos::orderBy('nome')->pluck('nome', 'id')->toArray(),
                         null, ['class'=>'form-control', 'required']) !!}
     </div>
 

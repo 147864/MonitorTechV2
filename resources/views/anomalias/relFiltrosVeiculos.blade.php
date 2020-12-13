@@ -10,31 +10,30 @@
         </ul>
     @endif
 
-    <h3>Novo Monitoramento</h3>
-    {!! Form::open(['route'=>'monitoramentos.store']) !!}
-
-    <div class="form-group" >
+    <h3 style="text-align: center">Relatório Gerencial de Anomalias por Veiculos</h3>
+    {!! Form::open(['route'=>'anomalias.relAnomaliasVeiculos']) !!}
+    
+    <div class="form-group">
         {!! Form::label('veiculo_id', 'Veículo:') !!}
         {!! Form::select('veiculo_id',
                         \App\Veiculos::orderBy('nome')->pluck('nome', 'id')->toArray(),
                         null, ['class'=>'form-control', 'required']) !!}
     </div>
-    
+
     <div class="form-group">
-        {!! Form::label('voltBateria', 'Bateria:') !!}
-        {!! Form::number('voltBateria', null, ['class' => 'form-control', 'required']) !!}
-        
+        {!! Form::label('dt_ini', 'Data Inicio:') !!}
+        {!! Form::date('dt_ini', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::label('voltAlternador', 'Alternador:') !!}
-        {!! Form::number('voltAlternador', null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::label('dt_fim', 'Data Fim:') !!}
+        {!! Form::date('dt_fim', null, ['class' => 'form-control', 'required']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Criar Monitoramento', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Gerar Relatório', ['class' => 'btn btn-primary']) !!}
         {!! Form::reset('Limpar', ['class' => 'btn btn-default']) !!}
     </div>
 
     {!! Form::close() !!}
-    <@php echo link_to('monitoramentos', $title='Voltar' , $attributes=[], $secure=null); @endphp @stop
+@stop

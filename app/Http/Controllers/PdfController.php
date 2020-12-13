@@ -59,7 +59,7 @@ class PdfController extends Controller
         
     }
 
-    public function anomalias(Request $request){
+    public function anomaliasCliente(Request $request){
         $anomalia = Anomalias::all();
 
         $cliente = $request->cliente_id;
@@ -72,19 +72,31 @@ class PdfController extends Controller
         left join veiculos v ON a.veiculo_id = v.id
         inner join clientes c on v.cliente_id = c.id
         inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
-        where a."avariaBateria" > 0 or a."avariAlternador" > 0
-        and c.id = ? 
-        and v.id = ? 
-        and a.created_at between ? and ?',[$cliente,$veiculo,$data_ini,$data_fim]);
+        and c.id = ? and a.created_at between ? and ?',[$cliente,$data_ini,$data_fim]);
         //dd($query);
 
-        $pdf = PDF::loadView('relatorios\anomalias', ['query'=>$query]);
+        $pdf = PDF::loadView('relatorios\anomaliasCliente', ['query'=>$query]);
         return $pdf->setPaper('a4')->stream('anomalias.pdf');
-    }   
+    }
 
-    
+    public function anomaliasVeiculo(Request $request){
+        $anomalia = Anomalias::all();
 
-    
+        $cliente = $request->cliente_id;
+        $veiculo = $request->veiculo_id;
+        $data_ini = $request->dt_ini;
+        $data_fim = $request->dt_fim;
 
+        $query = DB::select('select a.id, c.nome as cliente, v.nome, a."avariaBateria", a."avariAlternador", a.created_at, t.laudo
+        from anomalias a
+        left join veiculos v ON a.veiculo_id = v.id
+        inner join clientes c on v.cliente_id = c.id
+        inner join "tipoAnomalias" t on a."tipoAnomalia_id" = t.id
+        and v.id = ? 
+        and a.created_at between ? and ?',[$veiculo,$data_ini,$data_fim]);
+        //dd($query);
 
+        $pdf = PDF::loadView('relatorios\anomaliasVeiculo', ['query'=>$query]);
+        return $pdf->setPaper('a4')->stream('anomalias.pdf');
+    }
 }
