@@ -19,11 +19,11 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th width="10%">Monitoramento</th>
-                    <th>Veiculo</th>
-                    <th width="2px">Bateria</th>
-                    <th width="2px">Alternador</th>
-                    <th width="30%">Laudo</th>
+                    <th width="1%">Monitoramento</th>
+                    <th width="15%">Veiculo</th>
+                    <th width="1%">Bateria (v)</th>
+                    <th width="1%">Alternador (v)</th>
+                    <th width="14%">Laudo</th>
                     <th width="30%">Possivel Solução</th>
 
                 </tr>

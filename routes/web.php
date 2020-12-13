@@ -59,8 +59,12 @@ Route::group(['middleware' =>'auth'], function(){
         Route::get('{id}/edit', ['as'=>'anomalias.edit',      'uses'=>'AnomaliasController@edit'   ]);
         Route::put('{id}/update', ['as'=>'anomalias.update',    'uses'=>'AnomaliasController@update' ]);
         Route::post('store', ['as'=>'anomalias.store',     'uses'=>'AnomaliasController@store'  ]);
-        Route::get('relFiltros', ['as'=>'anomalias.relFiltros',    'uses'=>'AnomaliasController@relFiltros' ]);
-        Route::any('relAnomalias', ['as'=>'monitoramentos.relAnomalias',    'uses'=>'PdfController@anomalias']);
+        // Route::get('relFiltros', ['as'=>'anomalias.relFiltros',    'uses'=>'AnomaliasController@relFiltros' ]);
+        Route::any('relFiltrosClientes', ['as'=>'anomalias.relFiltrosClientes',    'uses'=>'AnomaliasController@relFiltrosClientes' ]);
+        Route::any('relAnomaliasClientes', ['as'=>'anomalias.relAnomaliasClientes',    'uses'=>'PdfController@anomaliasCliente']);
+        Route::any('relFiltrosVeiculos', ['as'=>'anomalias.relFiltrosVeiculos',    'uses'=>'AnomaliasController@relFiltrosVeiculos' ]);
+        Route::any('relAnomaliasVeiculos', ['as'=>'anomalias.relAnomaliasVeiculos',    'uses'=>'PdfController@anomaliasVeiculo']);
+        Route::any('relAnomalias', ['as'=>'anomalias.relAnomalias',    'uses'=>'PdfController@anomalias']);
     });
 
     Route::group(['prefix'=>'tipoAnomalias', 'where'=>['id'=>'[0-9]+']], function () {

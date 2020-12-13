@@ -4,62 +4,49 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tipos de Veículos</title>
+    <title>Relatório Veículos</title>
     <!-- Fonts -->
     <!-- Styles -->
     <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 10;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
+        th#thimgHeader{
+            border-bottom: 1px solid #0000;
+            padding: 0px 18px;
             text-align: center;
         }
-
-        .title {
-            font-size: 84px;
+        th#thimgHeader img{
+            width: 95%;
+            padding: 5px;
+        }
+        th#thtituloHeader{
+            padding: 0px 0px;
+        }
+        th#thtituloHeader h4{
+            font-weight: bold;
+            padding: 0px 0px 5px 0px;
+            letter-spacing: 1px;
+        }
+        body{
+            background: rgba(7, 8, 8, 0)
         }
 
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
 
-        .m-b-md {
-            margin-bottom: 30px;
+		@media print {
+            body,
+            .content,
+            .page-header-fixed {
+                padding: 0 !important;
+                margin: 8px 5px 8px 5px !important;
+            }
+            .sidebar,
+            .header,
+            .panel-heading,
+            .theme-panel {
+                display: none !important;
+            }
         }
     </style>
 </head>
+<h1>Relatório de Veículos</h1>
 <body> 
 <div class="flex-center position-ref full-height">
     <table border="1">

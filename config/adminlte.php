@@ -301,12 +301,16 @@ return [
             'icon'    => 'fas fa-print',
             'submenu' => [
                 [
-                    'text' => 'Registro de Monitoramentos',
+                    'text' => 'Monitoramentos',
                     'url'  => 'monitoramentos\relFiltros',
                 ],
                 [
-                    'text' => 'Registro de Anomalias',
-                    'url'  => 'anomalias\relFiltros',
+                    'text' => 'Anomalias por Cliente',
+                    'url'  => 'anomalias\relFiltrosClientes',
+                ],
+                [
+                    'text' => 'Anomalias por Veiculos',
+                    'url'  => 'anomalias\relFiltrosVeiculos',
                 ],
             ],
         ],

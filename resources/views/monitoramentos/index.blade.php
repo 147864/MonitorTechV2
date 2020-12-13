@@ -23,10 +23,10 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Identificador</th>
-                    <th>Veículo</th>
-                    <th>Bateria</th>
-                    <th>Alternador</th>
+                    <th width="1%">Identificador</th>
+                    <th width="30%">Veículo</th>
+                    <th width="15%">Bateria (v)</th>
+                    <th width="15%">Alternador (v)</th>
                     <th>Data - Hora</th>
                 </tr>
             </thead>

@@ -9,11 +9,19 @@ use App\Http\Requests\AnomaliaRequest;
 class AnomaliasController extends Controller{
     public function index(){
         $anomalias = Anomalias::orderBy('id')->paginate(10);
-        return view('anomalias.index', ['anomalias'=>$anomalias]);// NESSA LINHA VAI DAR MERDA
+        return view('anomalias.index', ['anomalias'=>$anomalias]);
     }
 
     public function relFiltros(){
         return view ('anomalias.relFiltros');
+    }
+
+    public function relFiltrosClientes(){
+        return view ('anomalias.relFiltrosClientes');
+    }
+
+    public function relFiltrosVeiculos(){
+        return view ('anomalias.relFiltrosVeiculos');
     }
 
     public function create (){
